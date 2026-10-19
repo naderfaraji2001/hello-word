@@ -1,0 +1,325 @@
+[
+  {
+    "id": "P01",
+    "route": "/",
+    "label": "Home",
+    "seoTitle": "Utopia Tech — Connected Technology for Specialty Healthcare",
+    "description": "Healthcare integrations, technology, security and operational support for medical laboratories and behavioral health organizations.",
+    "title": "Home",
+    "body": "",
+    "slug": ""
+  },
+  {
+    "id": "P02",
+    "route": "/solutions",
+    "label": "Services",
+    "seoTitle": "Healthcare Technology Services — Utopia Tech",
+    "description": "Explore integrations, managed IT, security, revenue workflows, data, automation and patient engagement.",
+    "title": "Connect the technology. Improve the operation.",
+    "body": "Services\n\n\nWe help healthcare organizations address the practical issues between systems, teams and vendors. Each service can solve a focused problem or form part of a wider technology partnership.\n\n\n\n### Where we fit\n\n## Work with the team you have.\n\n- **No internal IT team:** We can discuss a defined technology-management scope that gives responsibilities a clear home.\n- **A small internal team:** Add specialist capability for the work your team cannot reasonably cover alone.\n- **An established IT department:** Bring in focused support for integration, architecture, implementation and strategic decisions.\n\n### Connected in practice\n\n## A service matters when it changes the workflow.\n\nAn interface is useful because information reaches the next step. Backup matters because the organization can recover. Reporting matters because leadership can act on what it sees. Our case studies explain the work in that context.\n\n\n### Frequently asked questions\n**Can we start with one service?** Yes. A focused project can be the right starting point. We agree on scope rather than requiring a full-service engagement. **Do you recommend particular vendors?** We consider the systems, requirements and costs already present. Any recommended platform must serve the operation.",
+    "slug": "solutions"
+  },
+  {
+    "id": "P03",
+    "route": "/solutions/integrations",
+    "label": "Healthcare Integrations",
+    "seoTitle": "LIS, EMR & Billing Integration — Utopia Tech",
+    "description": "Connect laboratory, clinical and billing systems around the way your healthcare organization works.",
+    "title": "Let information move with the work.",
+    "body": "Healthcare integrations\n\n\nConnect laboratory, clinical and billing systems around the handoffs that matter. We examine the workflow, define the interface and help make the connection manageable over time.\n\n\n### The problem\n\n## A completed task should not start another round of data entry.\n\nOrders, results, demographics and billing information often travel through separate systems. When a handoff depends on a spreadsheet, an email or repeated entry, staff spend time moving information instead of using it. Troubleshooting becomes harder when each vendor sees only its own part.\n\n### What we connect\n\n- EMR and LIS workflows for laboratory orders and results.\n- Laboratory instruments and the LIS.\n- LIS and billing systems.\n- Clinical, operational and customer-service platforms where the integration is appropriate.\n- Reporting environments that need information from multiple sources.\n\n### How the work is delivered\n\n## Map it. Connect it. Check it. Own it.\n\n1. Define source, destination, field mappings and the people responsible.\n2. Confirm the available standards, access, vendor dependencies and exception cases.\n3. Build and test the agreed connection using middleware, APIs or supported interface methods.\n4. Document the workflow, monitoring and support responsibilities.\n\n\n### Technical depth, in context\n\nIntegration approaches include HL7, FHIR, ASTM, APIs and middleware. The right method depends on the systems and the workflow. We confirm compatibility before promising a connector or a delivery date.\n\n### FAQ\n\n**Do we need a new LIS?** Often the first question is whether the existing LIS can support the workflow properly. We assess that before recommending replacement.\n\n**Do you support KIPU and Sunwave?** Utopia's documented work includes interfaces with these systems. The exact interface, version, access and vendor requirements still need to be confirmed for your project.\n\n**How long does an interface take?** Timing depends on mapping, vendor access, testing and the complexity of the workflow. We agree on a timeline after scoping.\n\n**Who supports the connection afterwards?** The engagement should define monitoring, escalation, vendor coordination and ongoing support. We make those responsibilities part of the conversation.",
+    "slug": "integrations"
+  },
+  {
+    "id": "P04",
+    "route": "/solutions/managed-it",
+    "label": "Managed IT & Security",
+    "seoTitle": "Managed IT & Security for Healthcare — Utopia Tech",
+    "description": "Infrastructure, Microsoft environments, security, backup and recovery for specialty healthcare organizations.",
+    "title": "Technology that supports the day you need to run.",
+    "body": "Managed IT & security\n\n\nInfrastructure, cloud services, Microsoft environments and security should fit the demands of the healthcare operation. We help examine the foundation and address the gaps that matter.\n\n\n### What we examine\n\n## The foundation is part of the workflow.\n\nA server outage can interrupt specimen intake. A poorly managed license portfolio can create recurring cost. A backup that has never been restored leaves an important question unanswered. We look at the operational effect as well as the technical configuration.\n\n### Service scope\n\nInfrastructure and network planning; servers and virtualization; cloud environments; Microsoft 365 and identity; endpoint and email security; backup and disaster recovery; vendor and licensing review; defined user-support arrangements.\n\n### How we approach resilience\n\n## Know what is protected and how recovery works.\n\nWe review the systems that matter, the information they depend on and the recovery arrangements around them. Implementation scope may include endpoint protection, access controls, backup improvements and documented restoration procedures. No uptime percentage or recovery-time guarantee is implied without an agreed service scope.\n\n### FAQ\n\n**Can you manage the whole environment?** We can discuss a full or partial management arrangement. Scope depends on the organization's needs and responsibilities already in place.\n\n**Can you review Microsoft licensing?** Yes. Documented engagements include reviewing reseller arrangements and migration into Microsoft environments.\n\n**Do you certify HIPAA compliance?** This website does not offer a compliance certification. We can address technology and security controls within an agreed engagement and work alongside the appropriate advisors.\n\n**Can you work with another security provider?** Yes. Defined ownership and coordination are important when several specialists are involved.",
+    "slug": "managed-it"
+  },
+  {
+    "id": "P05",
+    "route": "/solutions/revenue-optimization",
+    "label": "Revenue Workflows",
+    "seoTitle": "Healthcare Revenue Workflow Support — Utopia Tech",
+    "description": "Examine eligibility, authorizations, data handoffs and billing workflows to find avoidable administrative friction.",
+    "title": "Find the problem before it reaches the claim.",
+    "body": "Revenue workflows\n\n\nEligibility, authorization, documentation and billing are connected pieces of the same operation. We help examine how information and responsibility move between them.\n\n\n### The problem\n\n## A denial can begin several steps earlier.\n\nAn authorization may need follow-up. A required field may be missing from the first handoff. A team may be comparing LIS and billing data by hand. Looking only at the final claim can miss the source of repeated work.\n\n### What the assessment can cover\n\nEligibility and authorization processes; EMR–LIS–billing data flow; manual reconciliation; denial and AR handoffs; operational reporting; opportunities for integration and automation.\n\n### The right response\n\n## Sometimes it is a connection. Sometimes it is capacity.\n\nTechnology is one possible response. A process change, clearer ownership or specialist billing support may be more useful.\n\n### Responsibility matters\n\nWe distinguish technology and workflow work from specialist coding, payer policy and billing decisions. The engagement brings in the expertise the problem actually requires.\n\n### FAQ\n\n**Will you replace our billing company?** That is not the starting assumption. We first examine the workflow and the responsibilities already in place.\n\n**Can you guarantee higher collections?** We define goals and measures for the engagement. This website does not promise a collection percentage.\n\n**Can an integration help?** It may reduce repeated transfer and reconciliation, but the available connection and source data need to be assessed.\n\n**What should we bring to the first conversation?** A description of the workflow, the systems involved and where the work gets stuck. Do not send patient records through the website.",
+    "slug": "revenue-optimization"
+  },
+  {
+    "id": "P06",
+    "route": "/solutions/ai-automation",
+    "label": "Data, AI & Automation",
+    "seoTitle": "Healthcare Data, AI & Automation — Utopia Tech",
+    "description": "Connect operational data, improve reporting and identify practical automation opportunities.",
+    "title": "Connect the data before asking more of it.",
+    "body": "Data, AI & automation\n\n\nGive leadership a more useful view of the operation through connected data, reporting and practical automation.\n\n\n### Existing work\n\n## Make the information easier to use.\n\nOur documented work includes data consolidation and Microsoft business-intelligence reporting, connecting LIS information to other platforms and replacing manual transfers. We start with the questions the operation needs to answer, then examine the systems holding the information.\n\nData-flow review; data warehouse and reporting design; executive dashboards; recurring reports; exception alerts; repetitive workflow automation.\n\n### Laboratory AI assistant \n\nIn development\n\n## An operational question should not require five report requests.\n\nWe are developing an assistant concept for questions such as today's test volume, turnaround time, pending billing and changes in client activity. The direction is to make appropriate connected operational data easier to ask about and understand.\n\nOperational questions: What is our test volume today? Which orders are waiting at the next step? What has changed in client activity? Which completed tests still need billing follow-up?\n\nInterface concept. Availability, supported data sources and access controls are defined as the product develops.\n\n\n\n### FAQ\n\n**Can we use the assistant today?** Contact us to discuss what is currently ready to review. The product is in development.\n\n**Do we need AI for reporting?** Not necessarily. A reliable integration or a clear report may be the right answer.\n\n**Will it connect to every system shown in the mockups?** No such availability claim is made. Supported systems need to be confirmed for the intended workflow.",
+    "slug": "ai-automation"
+  },
+  {
+    "id": "product-behavioral-health",
+    "route": "/products/behavioral-health-application",
+    "label": "Behavioral health application",
+    "seoTitle": "Behavioral health application in development | Utopia Tech",
+    "description": "Explore the behavioral health application in development for patients, support people and care teams, with original interface concepts.",
+    "title": "A closer connection between visits.",
+    "body": "## Built around the people in the care journey\n\nA behavioral health journey involves patients, support people and care teams. The application in development explores ways to connect those experiences and reduce the friction around communication and follow-up.\n\nThe designs below show the original Care Sentry interface concepts. They illustrate intended experiences, rather than a released clinical application. Availability, implementation scope and release timing have not been established.\n\n## Onboarding and roles\n\nThe onboarding concepts introduce patient, sober-friend and case-manager roles. They explore progress tracking and virtual check-ins alongside sign-in and consent screens. Each role needs a clear purpose and appropriate access to information.\n\n## Patient experience\n\nThe patient concepts include a home view, medication-history views, a profile and communication flows. The boards also contain proposed help-request screens. These are design concepts; emergency response, clinical monitoring and integrations are not represented as operational or released capabilities.\n\n## Case-manager experience\n\nThe care-team concepts explore a patient list, patient information and follow-up context. The original boards make the intended relationships visible so that teams can discuss the workflow and the responsibilities around it.\n\n## From interface to a working care process\n\nAn interface is only one part of implementation. Access, consent, clinical responsibilities, escalation, information governance and connections to existing systems need to be established with the organization before any deployment.\n\n## Discuss the intended workflow\n\nTell us about the people involved, the communication gaps and the tools you use today. Please describe the operational need without including patient information. We can discuss the product direction and what is currently ready to review.\n\n[Discuss the application](/contact?intent=patient-engagement) · [Explore patient engagement services](/solutions/engagement-workflows)",
+    "slug": "behavioral-health-application"
+  },
+  {
+    "id": "P08",
+    "route": "/industries",
+    "label": "Industries",
+    "seoTitle": "Who We Help — Utopia Tech",
+    "description": "Technology and operational expertise for laboratories, behavioral health organizations and adjacent medical practices.",
+    "title": "Different care settings. Connected operational questions.",
+    "body": "Who we help\n\n\nWe focus on the environments we know most deeply: medical laboratories and behavioral health organizations. We also assess suitable technology and integration needs in adjacent medical practices.\n\n\n**Medical laboratories:** Orders, instruments, results and revenue depend on reliable handoffs. Explore laboratory solutions.\n\n**Behavioral health:** Admissions, care teams, authorizations and ongoing engagement need to work together. Explore behavioral health solutions.\n\n**Clinics & practices:** Bring a specific integration, infrastructure or workflow issue into a practical assessment. Explore practice support.\n\nClosing text: Already have an internal technology team? We can work alongside it. The relationship is defined around the expertise and capacity you need.",
+    "slug": "industries"
+  },
+  {
+    "id": "P09",
+    "route": "/industries/laboratories",
+    "label": "Laboratories",
+    "seoTitle": "Technology for Medical Laboratories — Utopia Tech",
+    "description": "LIS–EMR integration, instrument connectivity, infrastructure and operational visibility for independent laboratories.",
+    "title": "Built around the way your laboratory runs.",
+    "body": "Medical laboratories\n\n\nFrom the first order to the result and billing handoff, we help examine the technology standing between the work and its next step.\n\n\n**We know the handoffs:** A new instrument needs an interface. A completed result has not reached the ordering provider. A requisition arrives incomplete. Billing data needs another spreadsheet. Different vendors each point to a different system.\n\n**The connected journey:** Order → Specimen → Testing → Result → Billing → Payment.\n\n**What we can help with:** LIS–EMR and instrument interfaces; laboratory infrastructure and cloud; backup and security; LIS–billing workflows; reporting and operational data.\n\n\n**Working with your team:** We can provide a defined integration project, specialist capacity for internal IT or a broader technology relationship. The appropriate model depends on the laboratory.\n\n### Frequently asked questions\n**Do you understand instrument workflows?** Documented work includes bringing instruments into LIS workflows, including the Bella BioFire engagement. **Can you help with recurring interface costs?** We can review the existing model, obligations and alternatives. Savings depend on the real contracts and architecture. **Can we ask about one connection first?** Yes. A focused issue is a useful starting point.",
+    "slug": "laboratories"
+  },
+  {
+    "id": "P10",
+    "route": "/industries/behavioral-health",
+    "label": "Behavioral Health",
+    "seoTitle": "Technology for Behavioral Health — Utopia Tech",
+    "description": "Connect admissions, clinical systems, laboratory services and revenue workflows across behavioral health organizations.",
+    "title": "Connect the operation around the care journey.",
+    "body": "Behavioral health\n\n\nHelp admissions, clinical teams, case managers, laboratories and billing work with a clearer picture of the same organization.\n\n\n**Where friction shows up:** Authorizations need follow-up. Admissions and clinical information are separate. Laboratory results require another portal. Staff build census reports by hand. Discharge ends the system-supported relationship too early.\n\n**The journey we examine:** Lead → Insurance verification → Admission → Treatment → Documentation and billing → Discharge → Continued support.\n\n**What we can help with:** Technology and licensing review; EMR and laboratory integrations; revenue-workflow assessment; operational reporting; vendor coordination; discussion of patient-engagement tools in development.\n\n**Experience, with the scope made clear:** The founder's healthcare work began inside a behavioral health organization with its own laboratory. Later engagements included related laboratory and rehab operations. The multi-facility licensing engagement is a technology-cost case; it is not proof of a clinical treatment outcome.\n\n\n### Frequently asked questions\n**Do you work with a single facility?** We can discuss the need and whether the engagement is a good fit. **Can you support a multi-site group?** Assessment can include shared systems, vendor arrangements and cross-site information flows. **Do you replace clinicians or make treatment decisions?** No. The website describes technology and operational support.",
+    "slug": "behavioral-health"
+  },
+  {
+    "id": "P11",
+    "route": "/industries/clinics",
+    "label": "Clinics & Practices",
+    "seoTitle": "Technology for Clinics & Practices — Utopia Tech",
+    "description": "Integration, infrastructure and workflow support for practices with disconnected systems and administrative bottlenecks.",
+    "title": "Start with the workflow your practice needs to fix.",
+    "body": "Clinics & practices\n\n\nA laboratory result, an authorization or a billing handoff can become an administrative bottleneck. We assess suitable technology and integration needs in medical practices.\n\n\n**Areas to explore:** Lab orders and results reaching the EHR; intake and scheduling handoffs; technology and security infrastructure; vendor overlap; information needed for reporting and billing.\n\n**How we determine fit:** Our deepest delivery experience is in laboratories and behavioral health. For a practice, we first define the issue and confirm whether it fits our integration, infrastructure, data or workflow expertise.\n\n\n### Frequently asked questions\n**Do you work with our EHR?** We confirm system capabilities and access as part of scoping. **Do you provide a complete practice-management service?** Not as a blanket offer on this website. The engagement covers the agreed specialist work. **Can you work with our billing provider?** We can assess the information handoffs and coordinate where the scope requires it.",
+    "slug": "clinics"
+  },
+  {
+    "id": "P12",
+    "route": "/assessment",
+    "label": "Assessment",
+    "seoTitle": "Request a Healthcare Technology Assessment — Utopia Tech",
+    "description": "Tell us about your organization, systems and priorities. Start with a clearer view of what needs to work better.",
+    "title": "Assessment",
+    "body": "",
+    "slug": "assessment"
+  },
+  {
+    "id": "P13",
+    "route": "/assessment/thank-you",
+    "label": "Confirmation",
+    "seoTitle": "Request Received — Utopia Tech",
+    "description": "Confirmation of your assessment request.",
+    "title": "Confirmation",
+    "body": "",
+    "slug": "thank-you"
+  },
+  {
+    "id": "P14",
+    "route": "/case-studies",
+    "label": "Our Work",
+    "seoTitle": "Healthcare Technology Case Studies — Utopia Tech",
+    "description": "Explore how Utopia has approached infrastructure, integration, security and operational problems in healthcare.",
+    "title": "Our Work",
+    "body": "",
+    "slug": "case-studies"
+  },
+  {
+    "id": "P15",
+    "route": "/case-studies/healthquest-connected-operations",
+    "label": "Connected Laboratory Operations",
+    "seoTitle": "Connecting a Growing Laboratory — Utopia Tech Case Study",
+    "description": "A laboratory engagement spanning infrastructure, integrations, backup, security and management reporting.",
+    "title": "Following the workflow through a growing laboratory.",
+    "body": "Case study · Laboratory operations\n\n\nA laboratory needed technology that could support increased demand. The engagement expanded from infrastructure into interfaces, resilience and a more useful view of operational information.\n\nTags: Infrastructure; Integrations; Backup & recovery; Reporting.\n\n**The situation**\n\nDuring the increase in testing demand associated with COVID, the laboratory's technology environment needed to support greater volume. The issues did not stop at servers: information had to move between the lab, client EMRs, billing and reporting agencies, while management needed a clearer view of the operation.\n\n**What we found**\n\nThe existing infrastructure needed strengthening. Disconnected systems created repeated entry and manual handoffs. Recovery arrangements and endpoint protection needed attention. Information for leadership was spread across systems, and staff were moving some information through Excel.\n\n**What Utopia did**\n\nWe assessed the environment and built a stronger infrastructure foundation using servers and virtualization. We introduced middleware to support a more structured interface environment, connected clinical and laboratory workflows and linked the LIS with billing. We improved backup and disaster-recovery arrangements, including immutable backups, and implemented endpoint protection.\n\nThe work also addressed the information needed for decisions. A data warehouse and Microsoft reporting environment brought data into a more usable management view. Connecting the LIS to the customer-service platform reduced reliance on an Excel-based transfer. For a potential hospital opportunity, the founder worked with a third-party security provider on the technology requirements supporting the client's security effort.\n\n**What changed**\n\nThe organization had a more connected foundation for its expanding operation. Information could move through defined interfaces, manual file handling was reduced and leadership gained a more consolidated reporting view.\n\n**The workflow before and after**\n\nBefore: Manual transfers between separate systems.\n\nAfter: Connected workflows with a more consolidated reporting view.\n\n**What this case shows**\n\nA technology engagement can follow the workflow from one problem to the next. The infrastructure, interfaces, recovery and reporting work support the same operation.\n\n**Next step:** Where is information getting stuck in your laboratory? [Request an assessment](/assessment).",
+    "slug": "healthquest-connected-operations"
+  },
+  {
+    "id": "P16",
+    "route": "/case-studies/sbh-integration-and-licensing",
+    "label": "Integration & Licensing",
+    "seoTitle": "Reviewing Integration and Licensing Costs — Utopia Tech",
+    "description": "A specialty healthcare engagement focused on recurring technology costs and a reusable integration foundation.",
+    "title": "A closer look at the costs between the systems.",
+    "body": "Case study · Technology costs\n\n\nA review of licensing and interface arrangements identified opportunities to consolidate the technology environment and create a more reusable approach to connectivity.\n\nTags: Middleware; Licensing; Vendor management; Integrations.\n\n**The situation**\n\nThe organization was paying recurring costs through its Microsoft-related licensing arrangement and facing interface costs for connecting the LIS with client EMRs. Those expenses sat in different parts of the technology environment, but both affected the cost of operating and growing the business.\n\n**What Utopia did**\n\nWe reviewed the licenses and requirements, then planned the transition from the reseller arrangement into the Microsoft environment. The migration was organized around continuity of email and business operations.\n\nFor integrations, we implemented middleware to support a more reusable connection model. Instead of treating every interface as an isolated vendor project, the work created a foundation through which further connectivity could be managed.\n\n**What changed**\n\nThe organization reduced recurring licensing expenditure and gained a more centralized environment. The integration foundation also reduced recurring interface costs, according to the founder's documented account.\n\n**The workflow before and after**\n\nBefore: Licensing and interface charges reviewed as separate recurring costs.\n\nAfter: A consolidated licensing arrangement and reusable integration foundation.\n\n**What this case shows**\n\nA useful technology improvement may begin with the tools and contracts already in place. The work is not always about buying something new.\n\n**Next step:** Want a clearer view of recurring technology costs? [Request an assessment](/assessment).",
+    "slug": "sbh-integration-and-licensing"
+  },
+  {
+    "id": "P17",
+    "route": "/case-studies/monarch-laboratory-buildout",
+    "label": "Laboratory Buildout",
+    "seoTitle": "Building Technology for a New Lab Facility — Utopia Tech",
+    "description": "Planning the network, infrastructure, security and connected systems for a laboratory’s move.",
+    "title": "Plan the technology around the laboratory that needs to open.",
+    "body": "Case study · Laboratory infrastructure\n\n\nA laboratory move required a complete technology foundation, with infrastructure decisions connected to the work the new facility needed to support.\n\nTags: Infrastructure; Network; Cloud; Microsoft 365; Integrations.\n\n**The situation**\n\nA new location required more than moving equipment. The laboratory needed a network, servers, cloud services, security and the connections supporting its operational and billing workflows.\n\n**What Utopia did**\n\nWe planned and implemented the technology foundation for the location. The assessment also examined the software stack and recurring licenses. It identified a better fit between the organization's requirements and a Microsoft 365 environment, leading to a migration from Google Workspace alongside the wider buildout.\n\n**What changed**\n\nThe laboratory gained a connected environment planned around its actual requirements. The platform decision supported a more centralized way to manage email, documents and related work.\n\n**The workflow before and after**\n\nBefore: A facility move with technology decisions still to connect.\n\nAfter: A planned foundation for laboratory operations.\n\n**What this case shows**\n\nA facility project is an opportunity to review the whole environment. Adding infrastructure and removing unnecessary duplication can be parts of the same plan.\n\n**Next step:** Planning a new site or a technology change? [Discuss the project](/contact?intent=project).",
+    "slug": "monarch-laboratory-buildout"
+  },
+  {
+    "id": "P18",
+    "route": "/case-studies/bella-instrument-integration",
+    "label": "Instrument Integration",
+    "seoTitle": "Connecting a Laboratory Instrument to the LIS — Utopia Tech",
+    "description": "Bringing a BioFire instrument into the laboratory’s wider information workflow.",
+    "title": "Bring the instrument into the wider workflow.",
+    "body": "Case study · Instrument connectivity\n\n\nA BioFire instrument needed to exchange information with the laboratory information system so its work could participate in the laboratory's connected process.\n\nTags: Instrument interface; LIS; Laboratory workflow.\n\n**The situation**\n\nThe laboratory was performing respiratory testing with BioFire equipment. The instrument needed to function as part of the wider information workflow rather than remaining an isolated source of results.\n\n**What Utopia did**\n\nWe integrated the BioFire system with the LIS, defining a connection between the instrument and the laboratory system.\n\n**What changed**\n\nThe instrument became part of a connected workflow.\n\n**The workflow before and after**\n\nBefore: Instrument information outside the wider LIS workflow.\n\nAfter: Instrument-to-LIS connectivity.\n\n**What this case shows**\n\nThe purpose of an interface is the work it enables. The connection matters because the laboratory can use information in the next part of its process.\n\n**Next step:** Need to connect an instrument or investigate a handoff? [Talk to Utopia](/contact).",
+    "slug": "bella-instrument-integration"
+  },
+  {
+    "id": "P19",
+    "route": "/about",
+    "label": "About",
+    "seoTitle": "About Utopia Tech — Healthcare Operations First",
+    "description": "Meet the founder and the operational experience behind Utopia’s approach to healthcare technology.",
+    "title": "We learned the operation from the inside.",
+    "body": "About Utopia\n\n\nUtopia Tech Solutions brings together healthcare operational experience and enterprise technology execution. We work with medical laboratories and behavioral health organizations to understand the business and improve the systems supporting it.\n\n**The founder**\n\n## Nader Faraji\n\nFounder, Utopia Tech Solutions\n\nNader's healthcare work began inside a behavioral health organization in Southern California that also operated a medical laboratory. That experience brought him into the practical details of admissions, care coordination, billing, instruments, laboratory systems and results.\n\nHe later moved into enterprise technology, progressing through management to a VP of IT role. During the increase in laboratory testing demand associated with COVID, he began supporting laboratories that needed both technical delivery and an understanding of the way they worked. In early 2024, he moved into Utopia full time.\n\n**Why that background matters**\n\nAn operational issue rarely stays inside one department or one system. Understanding the context helps us ask better questions, work with the people involved and decide whether the useful response is an integration, a process change, stronger infrastructure or specialist support.\n\n**A small senior team**\n\nUtopia works as a small, senior team, bringing specialist expertise into the engagement when the work requires it. The founder's documented account describes working with two engineers.\n\n**At the industry conversation**\n\nStaying close to the field is part of understanding it.",
+    "slug": "about"
+  },
+  {
+    "id": "P20",
+    "route": "/how-we-work",
+    "label": "Our Approach",
+    "seoTitle": "How Utopia Works — From Assessment to Improvement",
+    "description": "Understand our approach to assessment, infrastructure, integration, automation, protection and continuous improvement.",
+    "title": "Understand the operation. Improve what matters.",
+    "body": "Our approach\n\n\nWe examine how the business works, find the bottleneck and bring together the right response. Then we review the change and continue from what the operation needs next.\n\n**The Utopia method**\n\n| Step | Copy |\n|---|---|\n| Assess | Understand the workflows, technology, costs, risks and immediate concerns. |\n| Run | Build and maintain the technology foundation the organization depends on. |\n| Connect | Bring systems and information into a more useful working relationship. |\n| Automate | Reduce repetitive work where the workflow and data support it. |\n| Protect | Address security, access, backup and recovery as part of the whole engagement. |\n| Understand | Turn connected data into information leadership and teams can use. |\n| Improve | Review the result, clarify ownership and find the next bottleneck. |\n\n\n**How an engagement starts**\n\nSome organizations begin with a defined assessment. Others have an immediate issue that needs stabilizing first. We agree on that starting point, the scope of the work and the people responsible.\n\n**What a roadmap should explain**\n\nPriorities; business context; dependencies; ownership; implementation scope; measures of progress; review points.\n\n**Working alongside your team**\n\nA good engagement makes responsibilities clearer. We define how Utopia, internal staff and other vendors work together rather than assuming one team replaces all the others.",
+    "slug": "how-we-work"
+  },
+  {
+    "id": "P21",
+    "route": "/partners",
+    "label": "Partnerships",
+    "seoTitle": "Integration Support for RCM & Billing Partners — Utopia Tech",
+    "description": "Specialist integration support for billing and RCM organizations serving healthcare clients.",
+    "title": "Bring specialist integration capability into your client work.",
+    "body": "For RCM & billing organizations\n\n\nYour team understands revenue cycle. Utopia can support the technical connections between client EMRs, laboratories and billing platforms.\n\n\n**Where we can help**\n\nSystem and workflow discovery; interface scoping and mapping; client-onboarding integration projects; LIS–EMR–billing connections; technical coordination; agreed white-label delivery arrangements.\n\n**How we work together**\n\n1. Understand your service and the client workflow.\n2. Define the integration need, access and dependencies.\n3. Agree on delivery, communication, branding and responsibility.\n4. Implement, test and document the agreed work.\n\n**The boundary**\n\nPartnership terms, support responsibilities and any client-facing branding are agreed directly. A vendor name on our website does not imply a formal partnership or universal connector availability.\n\n**Relevant work:** Explore [healthcare integrations](/solutions/integrations) and our [laboratory case studies](/case-studies).\n\n### Frequently asked questions\n**Can you work white-label?** We offer white-label integration support; the arrangement is scoped with each partner. **Do you replace our implementation team?** We can complement the capability you already have. **Can you quote before seeing the systems?** We first need enough information to understand the connection and its dependencies.",
+    "slug": "partners"
+  },
+  {
+    "id": "P22",
+    "route": "/resources",
+    "label": "Insights",
+    "seoTitle": "Healthcare Technology Insights — Utopia Tech",
+    "description": "Practical guides on integration, technology costs and patient engagement from Utopia.",
+    "title": "Insights",
+    "body": "",
+    "slug": "resources"
+  },
+  {
+    "id": "P23",
+    "route": "/resources/lis-emr-billing-handoffs",
+    "label": "Integration Guide",
+    "seoTitle": "Where LIS, EMR & Billing Handoffs Break Down — Utopia Tech",
+    "description": "Five practical handoffs to examine before adding another healthcare software platform.",
+    "title": "Where LIS, EMR and billing handoffs break down",
+    "body": "**Start with one order**\n\nChoose a representative workflow and ask the team to show what happens to it. Where is the order created? Which information moves into the laboratory system? How does the result return? What information reaches billing, and what still has to be entered by hand?\n\nThe purpose is to see the real handoffs. A diagram drawn only from a list of software names can miss the spreadsheet or email that makes the process work today.\n\n**1. Registration and order information**\n\nThe first handoff establishes information that later steps depend on. Find out which fields are required, where they originate and who handles a missing or inconsistent value. An interface can move incomplete information faster without making it useful.\n\n**2. The instrument and the laboratory system**\n\nA device may perform its testing work correctly while remaining outside the wider information flow. Confirm which information is exchanged, how it is matched and what happens when the connection fails. Instrument connectivity is an operational question as well as a technical one.\n\n**3. Result delivery**\n\nA result that is ready in the LIS may still be difficult for the next person to use. Ask where the ordering provider receives it and whether another portal, file transfer or manual step is involved. Define the exception path as carefully as the normal path.\n\n**4. The billing handoff**\n\nFollow the information into the billing process. Are staff reconciling two systems by hand? Does someone maintain a spreadsheet because one field never arrives? Distinguish the technology gap from questions that need specialist billing or payer expertise.\n\n**5. Monitoring and ownership**\n\nA connection needs a way to detect and resolve problems. Agree on who can see a failed message, who investigates it and which vendor or team owns the next action. Without that agreement, a technically valid integration can still leave staff making repeated calls.\n\n**Define the change before the build**\n\nA useful starting point is a small table: the current handoff, the problem, the proposed change and the evidence that would show it worked. The measure might be fewer manual transfers, a clearer exception queue or a shorter agreed process. Use a baseline you can actually observe.\n\nUtopia's laboratory work includes connecting instruments, LIS, EMRs and billing workflows. The specific standards, access and timeline depend on the systems involved. Start by understanding the handoff, then choose the integration.\n\n[Explore healthcare integrations.](/solutions/integrations)",
+    "slug": "lis-emr-billing-handoffs",
+    "excerpt": "A completed test is only one part of the workflow. Follow the information from the first order to the billing handoff before deciding what to automate."
+  },
+  {
+    "id": "P24",
+    "route": "/resources/review-healthcare-technology-costs",
+    "label": "Cost Guide",
+    "seoTitle": "Review Healthcare Technology Costs Before Buying More — Utopia Tech",
+    "description": "A practical approach to licenses, recurring interface charges, unused resources and vendor responsibility.",
+    "title": "Review technology costs before buying another platform",
+    "body": "**Make the recurring picture visible**\n\nTechnology costs are often spread across vendors, departments and renewal dates. Bring them into one view before deciding whether the organization needs another platform. Include licenses, infrastructure, cloud resources, interface charges and the support arrangements around them.\n\nAn invoice alone does not explain whether a service is valuable. Pair it with the workflow it supports, the people using it and the responsibility it covers.\n\n**Check the fit of the licenses**\n\nAsk what is being used and which capabilities the organization already owns. Overlap can develop when a team buys one service for email, another for documents and another for a feature already included elsewhere. The answer is not automatically to consolidate everything; it is to understand the fit and the cost of changing.\n\nUtopia's documented work includes reviewing Microsoft-related licensing arrangements and carrying out migrations. Those examples show a type of opportunity to investigate, not a standard savings percentage available to every organization.\n\n**Look at the integration model**\n\nWhen each new connection is treated as a separate project with separate recurring charges, growth can make the model expensive. Review what the fees actually cover, what the agreements permit and whether a reusable middleware approach is technically and commercially appropriate.\n\nA lower interface price is not the only consideration. Monitoring, testing, support and vendor dependencies still need a clear home.\n\n**Find resources without a current purpose**\n\nCloud and virtual infrastructure can remain active after a project changes or stops. Review ownership and purpose before removing anything. A resource that looks idle may still support a recovery plan, a scheduled task or another dependency. Cost review needs technical context.\n\n**Include the cost of manual work**\n\nA low software invoice can hide a time-consuming process. Repeated data entry, reconciliation and vendor follow-up belong in the conversation. Measure them carefully rather than assigning a dramatic hourly estimate with no baseline.\n\n**End with priorities**\n\nA useful review separates quick changes from decisions that need planning. It explains dependencies, transition work and the evidence behind the expected benefit. Some improvements may mean removing a tool. Others may justify investment in the foundation.\n\nStart with the environment the organization already has. The most useful next step becomes easier to see when cost and operational purpose are reviewed together.\n\n[Discuss a technology and operational assessment.](/assessment)",
+    "slug": "review-healthcare-technology-costs",
+    "excerpt": "Licensing, recurring interface charges, unused resources and unclear vendor responsibilities deserve a review before another tool is added."
+  },
+  {
+    "id": "P25",
+    "route": "/resources/behavioral-health-engagement",
+    "label": "Engagement Guide",
+    "seoTitle": "Designing Patient Engagement Around Behavioral Health Work — Utopia Tech",
+    "description": "Questions to ask about staff workload, between-visit support, discharge and the real status of product capabilities.",
+    "title": "Design patient engagement around the work of behavioral health",
+    "body": "**The journey continues between appointments**\n\nA patient-facing application needs a clear role in the wider care journey. What happens after admission, between sessions and after discharge? Which tasks belong to the patient, which to a case manager and which to another member of the care team?\n\nThose questions are more useful than beginning with a list of notifications, charts and integrations.\n\n**Map the staff work too**\n\nEngagement tools can add administrative work if they introduce another inbox or another place to enter information. Ask who reviews a response, what action follows and whether the relevant information can fit into the existing system of record.\n\nA reminder without an owner or a form without a defined next step may create the appearance of support while leaving the workflow unchanged.\n\n**Define the roles**\n\nPatients, support people, case managers and therapists need different experiences and permissions. A concept screen showing a role does not settle access rules, consent, escalation or implementation details. Those decisions need deliberate design.\n\nUtopia's early interface concepts show patient, support-person and case-manager directions. The wider product roadmap includes additional staff workflows. The distinction matters when the product is discussed with potential users.\n\n**Treat urgent interactions carefully**\n\nAn emergency-style button is a substantial operational promise. Before such a capability is described as available, the organization needs a defined response, ownership and realistic behavior when nobody can respond. A marketing prototype should never imply that pressing a concept control calls an actual emergency service.\n\n**Measure what is actually supported**\n\nUseful measures may include participation, follow-up activity and administrative time. Clinical outcomes require their own evidence. An attractive interface is not proof that a product improves recovery or reduces relapse.\n\n**Connect the product to the operation**\n\nA useful engagement tool should make its purpose, status and responsibilities understandable. That is the direction behind Utopia's behavioral health application in development: support the journey while examining the real work around it.\n\n[Explore the patient engagement product direction.](/products/behavioral-health-application)",
+    "slug": "behavioral-health-engagement",
+    "excerpt": "Start with the moments when patients and care teams need support. Then distinguish a useful workflow from a feature list."
+  },
+  {
+    "id": "P26",
+    "route": "/contact",
+    "label": "Contact",
+    "seoTitle": "Contact Utopia Tech",
+    "description": "Discuss a healthcare integration, technology or operational challenge with Utopia.",
+    "title": "Contact",
+    "body": "",
+    "slug": "contact"
+  },
+  {
+    "id": "P27",
+    "route": "/privacy",
+    "label": "Privacy",
+    "seoTitle": "Privacy Notice — Utopia Tech",
+    "description": "How Utopia handles information submitted through this website.",
+    "title": "Privacy notice",
+    "body": "This notice explains how Utopia Tech Solutions handles information submitted through this website.\n\n**Information you choose to provide**\n\nWhen you contact us or request an assessment, we receive the details you enter, such as your name, business email, organization, optional telephone number and the business priorities you describe. Please do not submit patient information, health records, test results or other sensitive clinical details.\n\n**How we use it**\n\nWe use inquiry information to review your request, respond, discuss a potential engagement and manage related business communications. Sending an inquiry does not enroll you in a newsletter.\n\n**Service providers**\n\nThe website uses hosting and business tools to operate the site and handle inquiries. When Google Sheets storage is enabled, request information is stored in a restricted-access spreadsheet used by Utopia. A scheduling tool may process information you submit through its own interface. \n\n**Website measurement**\n\nWe may measure page visits and interactions to understand how the website is used. Names, email addresses and the free-text contents of inquiry forms should not be sent to website analytics. Any optional tracking is configured and explained according to the tools actually used.\n\n**Unfinished forms**\n\nThe assessment can retain an unfinished draft in your browser tab so you can move between steps. You can clear the draft. Draft information is not submitted to Utopia until you send the completed form.\n\n**Retention and access**\n\nWe retain business-inquiry information for the time needed to respond, manage a relevant relationship and meet applicable obligations. Access should be limited to people who need it for that purpose. Contact us if you want to ask about, correct or request removal of information you submitted.\n\n**Contact**\n\nQuestions about this notice or an inquiry can be sent to info@utopiats.com. Do not include patient information in that message.\n\n**Updates**",
+    "slug": "privacy"
+  },
+  {
+    "id": "P28",
+    "route": "/terms",
+    "label": "Terms",
+    "seoTitle": "Website Terms — Utopia Tech",
+    "description": "Terms for using the Utopia Tech website and its informational content.",
+    "title": "Website terms",
+    "body": "**About the site**\n\nThis website describes the technology and operational services of Utopia Tech Solutions and provides general information. Website content does not constitute medical advice, a clinical service or an emergency-response service.\n\n**Service descriptions**\n\nAn engagement's scope, timing, responsibilities and commercial terms are agreed directly. General descriptions and case studies do not guarantee a particular result for another organization. Features described as in development may change and should not be treated as released capabilities.\n\n**Using the content**\n\nYou may use this website to learn about Utopia and contact us. Do not misuse the forms, attempt unauthorized access or submit information you are not permitted to share. Do not submit patient records through this marketing site.\n\n**Third-party links**\n\nLinks to third-party systems and services are provided for context or convenience. A link or a named technology does not by itself establish an endorsement, formal partnership or available integration.\n\n**Questions and service agreements**\n\nContact info@utopiats.com with questions. A separate written agreement governs any services you purchase from Utopia; submitting a website form does not create that agreement.",
+    "slug": "terms"
+  },
+  {
+    "id": "P29",
+    "route": "/accessibility",
+    "label": "Accessibility",
+    "seoTitle": "Accessibility — Utopia Tech",
+    "description": "Our website accessibility approach and how to report a barrier.",
+    "title": "Accessibility",
+    "body": "We are designing this website to be usable with keyboards, screen readers and a range of devices. Our implementation target is WCAG 2.2 Level AA. A target is not a claim that an independent audit has certified every page.\n\nFeatures: Clear heading structure; visible keyboard focus; labeled forms and errors; readable contrast; responsive content; reduced-motion alternatives; text explanations for important diagrams.\n\nReport a barrier: If something prevents you from using the site, contact info@utopiats.com. Tell us which page and what happened, without including patient information.",
+    "slug": "accessibility"
+  },
+  {
+    "id": "P30",
+    "route": "not-found",
+    "label": "404",
+    "seoTitle": "Page Not Found — Utopia Tech",
+    "description": "Find the right Utopia service, case study or contact page.",
+    "title": "404",
+    "body": "",
+    "slug": "not-found"
+  },
+  {
+    "id": "products",
+    "route": "/products",
+    "slug": "products",
+    "label": "Products",
+    "seoTitle": "Products in development | Utopia Tech",
+    "description": "Explore Utopia’s product development work for healthcare operations and behavioral health.",
+    "title": "Products shaped by the work.",
+    "body": "Our product development starts with the people and workflows inside healthcare organizations. Explore the behavioral health application concept and its original interface designs. The application is in development; the designs do not establish released capabilities."
+  },
+  {
+    "id": "engagement-workflows",
+    "route": "/solutions/engagement-workflows",
+    "slug": "engagement-workflows",
+    "label": "Patient engagement",
+    "seoTitle": "Patient engagement workflow services | Utopia Tech",
+    "description": "Review communication, follow-up and care-team handoffs across the patient journey.",
+    "title": "Make the next step easier to follow.",
+    "body": "## Start with the patient journey\n\nCommunication and coordination involve more than a single application. We review how patients, support people and staff move through the current workflow, where information is repeated and who owns the next action.\n\n## What the service can cover\n\n- Patient journey and communication review\n- Staff handoffs and follow-up responsibilities\n- Existing engagement tools and operational fit\n- Process mapping and practical priorities\n\n## Work with your existing team\n\nWe start with the tools and processes already in place. Together we identify gaps, agree on the work to address and define responsibility for implementation. Any clinical, escalation or consent requirements need the appropriate organization stakeholders.\n\n## A separate product direction\n\nUtopia is also developing a behavioral health application. That product is distinct from this workflow service. Its original interface concepts can support a conversation about future needs, but they do not establish released functionality or a required software purchase.\n\n[Explore the application in development](/products/behavioral-health-application)\n\n## Agree on a useful next step\n\nDescribe the coordination issue, the teams involved and the systems in use today. We can discuss an appropriate scope, the dependencies and how the work will be reviewed. Please do not submit patient information.\n\n[Discuss patient engagement workflows](/contact?intent=project)"
+  }
+]

@@ -1,0 +1,5 @@
+import 'server-only';
+import {createHmac,timingSafeEqual} from 'node:crypto';import type {FormType} from '../leads/mapping';
+function secret(){if(!process.env.RECEIPT_SIGNING_SECRET||process.env.RECEIPT_SIGNING_SECRET.length<32)throw Error('SIGNING_SECRET_REQUIRED');return process.env.RECEIPT_SIGNING_SECRET;}
+export function signReceipt(id:string,type:FormType){const body=Buffer.from(JSON.stringify({id,type,exp:Date.now()+3600000})).toString('base64url');return body+'.'+createHmac('sha256',secret()).update(body).digest('base64url');}
+export function verifyReceipt(token:string){try{const [body,sig]=token.split('.');const expected=createHmac('sha256',secret()).update(body).digest();const actual=Buffer.from(sig,'base64url');if(actual.length!==expected.length||!timingSafeEqual(actual,expected))return null;const r=JSON.parse(Buffer.from(body,'base64url').toString());return r.exp>Date.now()&&['assessment','contact'].includes(r.type)&&typeof r.id==='string'?r as {id:string;type:FormType;exp:number}:null;}catch{return null;}}

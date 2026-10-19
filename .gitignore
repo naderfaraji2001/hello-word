@@ -1,0 +1,36 @@
+node_modules/
+.next/
+.next-dev/
+coverage/
+*.tsbuildinfo
+
+# Local configuration and credentials
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+google-credentials*.json
+
+# Private lead/source data
+data/
+inputs/
+src/lib/content/private-evidence.ts
+
+# Browser and test state
+test-results/
+playwright-report/
+.playwright/
+playwright/.auth/
+.auth/
+browser-state/
+storage-state*.json
+
+# Local databases, logs, and OS files
+*.sqlite
+*.sqlite3
+*.log
+.DS_Store

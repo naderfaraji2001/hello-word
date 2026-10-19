@@ -1,0 +1,1 @@
+import {records} from '@/lib/content/repository';export default function sitemap(){const origin=process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000';return records.filter(r=>r.route.startsWith('/')&&!r.route.includes('thank-you')).map(r=>({url:origin+r.route}));}

@@ -1,0 +1,4 @@
+import {ArrowUpRight} from '@phosphor-icons/react/dist/ssr/ArrowUpRight';
+import {Suspense} from 'react';import {InquiryForm} from '@/components/forms';
+export const metadata={alternates:{canonical:'/contact'},title:'Contact Utopia Tech',description:'Discuss a healthcare integration, technology or operational challenge with Utopia.'};
+export default function Contact(){return <main id="main"><div className="container page-hero form-layout"><div className="form-intro"><p className="eyebrow">Contact</p><h1>Tell us what needs to work better.</h1><p>A specific integration, a technology decision or a broader operational issue is a useful place to start.</p><p><a href="mailto:info@utopiats.com">info@utopiats.com <ArrowUpRight size={16} aria-hidden="true"/></a><br/><a href="tel:+19492298100">+1 (949) 229-8100</a><br/>Irvine, California</p></div><Suspense fallback={<p>Preparing your contact form…</p>}><InquiryForm contact/></Suspense></div></main>}

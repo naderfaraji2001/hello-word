@@ -1,0 +1,54 @@
+{
+  "name": "utopia-website",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "content:check": "tsx scripts/check-content.ts",
+    "assets:prepare": "python3 scripts/prepare-assets.py",
+    "leads:export": "tsx scripts/export-local-leads.ts",
+    "setup": "node scripts/setup.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1.2",
+    "@hookform/resolvers": "5.9.1",
+    "@phosphor-icons/react": "2.1.10",
+    "@radix-ui/react-checkbox": "1.4.1",
+    "@radix-ui/react-popover": "1.3.1",
+    "@tailwindcss/postcss": "4.3.3",
+    "google-auth-library": "11.3.1",
+    "gsap": "3.15.0",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-hook-form": "7.90.0",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "server-only": "0.0.1",
+    "tailwindcss": "4.3.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.2",
+    "lighthouse": "13.5.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}

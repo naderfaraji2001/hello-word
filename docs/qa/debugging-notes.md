@@ -1,0 +1,15 @@
+# Resolved verification findings
+- Next/font calls now each use a module-scope const.
+- Compatible TS6 and lint toolchain locked.
+- Optional empty select value normalized to absent, with a regression test.
+- Small counters' contrast and progressbar semantics corrected.
+- Third challenge attempts are refused; the browser test clicks rather than expects the refused checkbox to become checked.
+- Development/production outputs isolated.
+- Private evidence, test screenshots and local lead files are excluded from Webpack watching so generating QA artifacts or receiving leads cannot reset UI state or process-memory local limits through hot reload.
+- CSV export uses async main for the project's module mode.
+- This ffmpeg build has no WebP encoder; poster PNG frames converted with Pillow instead. Both poster assets now exist.
+- Parallel Lighthouse runs under concurrent browser load are retained as diagnostics only; final performance is measured serially.
+- Development rate-limit and write-serialization state now live at process scope, surviving Next development module reloads; production Sheets still uses durable Redis.
+- Route heading focus now keys off a changed pathname, preventing React StrictMode's repeated initial effects from moving first-load keyboard focus away from the skip link.
+- Multi-select error associations and empty optional concern normalization verified by shared schema and browser tests.
+- Initial intro now uses a small nonblocking wordmark treatment. The full circular cover applies to route transitions, not first-load hero text. This removes an artificial LCP delay while retaining the reference motion vocabulary.

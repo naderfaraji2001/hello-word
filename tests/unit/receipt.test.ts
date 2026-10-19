@@ -1,0 +1,2 @@
+import {it,expect,vi} from 'vitest';import {signReceipt,verifyReceipt} from '../../src/lib/security/receipt';
+it('authenticates limited receipts, rejects tampering and expiration',()=>{process.env.RECEIPT_SIGNING_SECRET='synthetic-test-signing-secret-32-characters';const token=signReceipt('synthetic-id','assessment');expect(verifyReceipt(token)?.id).toBe('synthetic-id');expect(verifyReceipt(token+'x')).toBeNull();vi.spyOn(Date,'now').mockReturnValue(Date.now()+3600001);expect(verifyReceipt(token)).toBeNull();vi.restoreAllMocks();delete process.env.RECEIPT_SIGNING_SECRET;});

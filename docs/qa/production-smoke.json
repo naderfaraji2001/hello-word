@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": "Healthcare works\nbetter connected."
+    },
+    {
+      "route": "/assessment",
+      "status": 200,
+      "h1": "Before we prescribe, we learn how your organization actually works."
+    },
+    {
+      "route": "/case-studies/healthquest-connected-operations",
+      "status": 200,
+      "h1": "Following the workflow through a growing laboratory."
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

@@ -1,0 +1,1 @@
+export const sample={schemaVersion:'1',submissionId:'81a54745-b749-4f96-9fa0-8cbba3c72e39',organizationType:'laboratory',topChallenges:['manual_work'],locations:'2_5',sixMonthGoal:'Connect the order and billing workflow.',timeline:'exploring',name:'آزمایش Test',organization:'Synthetic QA',workEmail:'qa@example.com',contactConsent:true,sourcePath:'/assessment',website:''};

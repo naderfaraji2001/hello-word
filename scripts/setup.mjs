@@ -1,0 +1,2 @@
+import {readFile,writeFile} from 'node:fs/promises'; import {randomBytes} from 'node:crypto';
+try {await readFile('.env.local'); console.log('Existing .env.local preserved.');} catch {await writeFile('.env.local',(await readFile('.env.example','utf8')).replace('RECEIPT_SIGNING_SECRET=','RECEIPT_SIGNING_SECRET='+randomBytes(32).toString('hex')),{mode:0o600}); console.log('Private development environment created.');}

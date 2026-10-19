@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/solutions/integrations",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/products",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/products/behavioral-health-application",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/contact?intent=patient-engagement",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/solutions/integrations",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/products",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/products/behavioral-health-application",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/contact?intent=patient-engagement",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/solutions/integrations",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/products",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/products/behavioral-health-application",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/contact?intent=patient-engagement",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/solutions/integrations",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/products",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/products/behavioral-health-application",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/contact?intent=patient-engagement",
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "issues": []
+}

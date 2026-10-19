@@ -1,0 +1,8 @@
+# Reference inspection
+2026-10-18. Live reference opened in Codex browser: https://joyful-studies-761814.framer.app/. Desktop screenshot inspected; Social media service selected and expanded state confirmed. Reference uses centered photographic hero, tight Funnel headings, lime phrase highlights, floating three-part header, large bottom rail, service rails, dark comparison section and large footer. The reference's business metrics, pricing, testimonials and brand assets were excluded.
+
+No local reference MP4 was present. Cannot verify the supplied recording across its duration. File 04 provides the recorded timestamp map and measured targets. Current reconstruction follows that specification, with original healthcare imagery and truthful content substitutions. Case media is diagram-based rather than marketing performance screenshots. Mobile behavior is adapted from file 04 and tested at explicit widths; do not claim pixel-perfect matching to an unavailable local video.
+
+Observed local visual revisions: separate highlight line boxes to prevent overlap, constrain desktop service stage height, settle accordion width before capture, increase small counter contrast, correct progress semantics, preserve mobile content without pinning.
+
+Live mobile reference was also visually inspected at 390×844. Services become stacked vertical panels with full-width readable labels and a normal expand control, matching the chosen mobile adaptation. Browser viewport override reset after inspection. Local screenshots at 360, 390, 768, 1024, 1366 and 1440 verify Utopia's separate content requirements.
