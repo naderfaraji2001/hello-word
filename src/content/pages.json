@@ -134,9 +134,10 @@
     "id": "P14",
     "route": "/case-studies",
     "label": "Our Work",
-    "seoTitle": "Healthcare Technology Case Studies — Utopia Tech",
-    "description": "Explore how Utopia has approached infrastructure, integration, security and operational problems in healthcare.",
-    "title": "Our Work",
+    "seoTitle": "Healthcare Technology Case Studies | Utopia Tech",
+    "description": "Explore Utopia case studies across revenue cycle, system integration, workflow improvement, infrastructure, cybersecurity, data, AI, patient engagement, and technology leadership.",
+    "title": "The problem. The work. The change.",
+    "heroDescription": "See how Utopia approached specific business, technology, and operational problems—and what changed in each context. Every engagement has its own scope, constraints, and results.",
     "body": "",
     "slug": "case-studies"
   },
