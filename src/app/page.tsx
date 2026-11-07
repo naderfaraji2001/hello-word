@@ -1,16 +1,33 @@
+import {HomePeoplePhotos} from '@/components/home-people-photos';
+import {ProposedWork} from '@/components/proposed-work';
+import {ConnectedOperationExpanded} from '@/components/connected-operation-expanded';
 import {HeroFocusStrip} from '@/components/hero-focus-strip';
-import Image from 'next/image';import {RevealEnhancement} from '@/components/motion';import Link from 'next/link';import {Button,SectionHead} from '@/components/ui';import {CaseComparison,Process,Fragmentation} from '@/components/interactions';import {ArrowUpRight} from '@phosphor-icons/react/dist/ssr/ArrowUpRight';
+import Image from 'next/image';import {RevealEnhancement} from '@/components/motion';import {Button,SectionHead} from '@/components/ui';import {Process,Fragmentation} from '@/components/interactions';
 export default function Home(){return <main id="main"><RevealEnhancement/><section className="hero hero-business"><div className="hero-main"><h1>Solutions built around<br/>your business</h1><p>We assess four critical areas of your business—Revenue Cycle &amp; Billing, Technology &amp; Vendor Optimization, Operations &amp; Workflow, and Data &amp; AI Enablement—to identify gaps, reduce unnecessary costs, and build a practical roadmap for growth. Our goal is to help you use technology and AI in ways that improve everyday work and deliver measurable business results.</p><HeroFocusStrip/><div className="button-row"><Button href="/assessment">Request an assessment</Button><Button href="/case-studies" secondary>Explore our work</Button></div></div></section>
 <section className="section process-section"><div className="container"><Process/></div></section>
-<section className="section"><div className="container radar-layout"><div><p className="eyebrow">The connected operation</p><h2>Your systems.<br/><mark>One working picture.</mark></h2><p>A laboratory and a treatment center follow different journeys. Both depend on information reaching the right people, in the right system, at the right time.</p><div className="industry-links"><Link href="/industries/laboratories"><h3>Medical laboratories <ArrowUpRight size={24} aria-hidden="true"/></h3><p>From order and specimen to result and payment.</p></Link><Link href="/industries/behavioral-health"><h3>Behavioral health <ArrowUpRight size={24} aria-hidden="true"/></h3><p>From admission and treatment to discharge and continued support.</p></Link><Link className="small" href="/industries/clinics">Explore support for clinics and practices <ArrowUpRight size={18} aria-hidden="true"/></Link></div><p className="partnership-note">A partner at every stage. You stay in control of your systems, your vendors and what comes next.</p><div className="partner-carousel" aria-label="Clients"><div className="partner-track">{[0,1].map(copy=><div className="partner-group" key={copy} aria-hidden={copy===1?true:undefined}>{[['sbh','SBH Laboratories','https://sbhlaboratories.com'],['healthquest','HealthQuest Esoterics','https://hqesoterics.com'],['atlas','Atlas Healthcare Group','https://atlashealthcaregroup.com'],['detoxla','Detox LA','https://detoxla.com'],['satori-detox','Satori Detox','https://satoridetox.com'],['satori-bh','Satori Behavioral Health','https://satoribh.com'],['silicon-beach','Silicon Beach Treatment Center','https://siliconbeachtx.com'],['silicon-beach','Silicon Beach Sober Living','https://siliconbeachtx.com/sober-living']].map(([slug,name,url])=><a className="client-logo" href={url} key={name} tabIndex={copy===1?-1:undefined}><img src={`/media/clients/${slug}.png`} alt={name} width={220} height={90}/></a>)}</div>)}</div></div></div><div><div className="radar" role="img" aria-label="Illustrative connections: EMR / EHR, LIS, instruments, billing, CRM, infrastructure, security and reporting."><div className="radar-sweep"/><div className="radar-center">The<br/>operation</div>{['EMR / EHR','LIS','Instruments','Billing','CRM','Infrastructure','Security','Reporting'].map((x,i)=><span className={'radar-label radar-label-'+i} key={x}>● {x}</span>)}</div></div></div></section>
+<ConnectedOperationExpanded/>
 <section className="section why"><div className="container"><SectionHead eyebrow="Why Utopia" title={<>Follow the workflow.<br/><mark>Find the real problem.</mark></>} body="A billing issue can start at admission. A slow report can begin with a disconnected system. We look across the operation before deciding what to change." href="/how-we-work" action="How we work"/><p className="supporting">Our work brings together healthcare experience and technical execution. We can examine the handoff, identify the right response and help put it into practice.</p><Fragmentation/></div></section>
 
 
-<section className="section dark" id="work"><div className="container"><SectionHead eyebrow="Our work" title={<>Real problems.<br/><em>Specific work.</em></>} body="See how we have approached the technology and operational issues behind laboratory growth, recurring costs and disconnected systems." href="/case-studies" action="Explore the case studies"/><CaseComparison/></div></section>
+
+<ProposedWork/>
 
 
 
-<section className="section"><div className="container"><SectionHead eyebrow="The people behind the work" title={<>Healthcare experience.<br/><mark>Technical depth.</mark></>} body="Utopia is a small, senior team led by Nader Faraji. The work combines knowledge of healthcare operations with experience building and running enterprise technology." href="/about" action="Meet Utopia"/><div className="founder-layout"><div className="founder-photo"><Image src="/media/founder.webp" alt="Nader Faraji at a healthcare technology event" width={800} height={1000}/><div><strong>Nader Faraji</strong><span>Founder, Utopia Tech Solutions</span></div></div><div><p className="eyebrow">The approach behind the work</p><blockquote>“We understand the healthcare operation first. Then we use technology to make it work better.”</blockquote><p className="small">Nader Faraji · Founder statement</p><div className="expertise">{['Laboratory workflows','Behavioral health operations','Enterprise technology','Integration and implementation'].map(t=><p key={t}>{t}<ArrowUpRight size={18} aria-hidden="true"/></p>)}</div></div></div></div></section>
+<section className="section home-people">
+  <div className="container home-people-layout">
+    <HomePeoplePhotos>
+      <Image className="home-people-conversation" src="/media/founder-home-conversation.webp" alt="Nader Faraji speaking with attendees at a healthcare technology event" width={580} height={773} sizes="(max-width: 700px) 49vw, 285px"/>
+      <Image className="home-people-portrait" src="/media/founder-home-portrait.webp" alt="Nader Faraji at a healthcare technology event" width={900} height={675} sizes="(max-width: 700px) 48vw, 265px"/>
+    </HomePeoplePhotos>
+    <div className="home-people-copy">
+      <p className="eyebrow">The people behind the work</p>
+      <h2>Healthcare experience.<br/><mark>Technical depth.</mark></h2>
+      <p>Led by Nader Faraji, our team brings healthcare operations experience and enterprise technology expertise together.</p>
+      <Button href="/about" secondary>Meet Utopia</Button>
+    </div>
+  </div>
+</section>
 
 
 
