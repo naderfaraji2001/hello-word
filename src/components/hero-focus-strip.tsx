@@ -35,6 +35,13 @@ const rightStrands = [
   [205, 156, 27, .9, .58],
 ];
 
+const strandColors = [
+  {line: '#519eff', pulse: '#a8d8ff'},
+  {line: '#f3cd50', pulse: '#fff0a2'},
+  {line: '#f06768', pulse: '#ffacaa'},
+  {line: '#e3edf5', pulse: '#ffffff'},
+];
+
 export function HeroFocusStrip() {
   const tooltipId = useId();
   const [active, setActive] = useState<number | null>(null);
@@ -70,6 +77,7 @@ export function HeroFocusStrip() {
 
   const {width, height, left, right, top, bottom, radius, offsetX, offsetY} = bounds;
   const center = (top + bottom) / 2;
+  const stripMidpoint = (left + right) / 2;
   const spread = Math.min(1, width / 680);
   function strand(shape: number[], index: number, edge: number, corner: number) {
     const [offset, bend, approach, weight, opacity] = shape;
@@ -146,9 +154,38 @@ export function HeroFocusStrip() {
       </ul>
       {width > 0 && (
         <svg className="hero-light-flow" style={{left: offsetX, top: offsetY, width, height}} viewBox={`0 0 ${width} ${height}`} aria-hidden="true">
+          <defs>
+            {strandColors.map(({line, pulse}, index) => (
+              <g key={line}>
+                <linearGradient id={`${tooltipId}-line-${index}`} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={stripMidpoint} y2="0">
+                  <stop offset="0" stopColor={line}/>
+                  <stop offset=".42" stopColor={line}/>
+                  <stop offset="1" stopColor="#a5e34b"/>
+                </linearGradient>
+                <linearGradient id={`${tooltipId}-pulse-${index}`} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={stripMidpoint} y2="0">
+                  <stop offset="0" stopColor={pulse}/>
+                  <stop offset=".42" stopColor={pulse}/>
+                  <stop offset="1" stopColor="#d8ff90"/>
+                </linearGradient>
+              </g>
+            ))}
+            <filter id={`${tooltipId}-glow`} filterUnits="userSpaceOnUse" x="-16" y="-16" width={width + 32} height={height + 32}>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow"/>
+              <feMerge>
+                <feMergeNode in="glow"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
           <g fill="none" stroke="#a5e34b">
-            {incoming.map(({fromEdge, weight, opacity}) => (
-              <path key={fromEdge} d={fromEdge} strokeWidth={weight} opacity={opacity * .48}/>
+            {incoming.map(({fromEdge, weight, opacity}, index) => (
+              <path
+                key={fromEdge}
+                d={`${fromEdge} H ${stripMidpoint}`}
+                stroke={`url(#${tooltipId}-line-${index})`}
+                strokeWidth={weight}
+                opacity={opacity * .48}
+              />
             ))}
             {outgoing.map(({join, forward, weight, opacity}) => (
               <path key={join + forward} d={`M ${join} ${forward}`} strokeWidth={weight} opacity={opacity * .48}/>
@@ -166,7 +203,8 @@ export function HeroFocusStrip() {
                       className="hero-light-pulse"
                       d={route}
                       pathLength={100}
-                      stroke={pulse === 0 ? '#eaffb0' : '#c7ff73'}
+                      stroke={`url(#${tooltipId}-pulse-${index})`}
+                      filter={`url(#${tooltipId}-glow)`}
                       strokeWidth={weight + (pulse === 0 ? .65 : .35)}
                       strokeDasharray={['1.05 98.95', '.72 99.28', '.88 99.12'][pulse]}
                       strokeDashoffset={100 * delay / duration}

@@ -189,7 +189,6 @@ svg{flex-shrink:0}.industry-links h3{display:flex;align-items:center;gap:12px}.i
 }
 
 .hero-light-pulse {
-  filter: drop-shadow(0 0 3px #c6ff6d) drop-shadow(0 0 6px #a5e34b99);
   animation: hero-light-pass linear infinite;
 }
 
