@@ -1,0 +1,146 @@
+{
+  "epic": {
+    "name": "Epic",
+    "site": "https://epic.com",
+    "source": "https://media.epic.com/epicdotcom/site/images/header/site-logo.png",
+    "asset": "/media/vendors/epic.png"
+  },
+  "athenahealth": {
+    "name": "athenahealth",
+    "site": "https://athenahealth.com",
+    "source": "https://www.athenahealth.com/resources_ahcom/0223d75b4d0e048c9d8e.svg",
+    "asset": "/media/vendors/athenahealth.svg"
+  },
+  "eclinicalworks": {
+    "name": "eClinicalWorks",
+    "site": "https://eclinicalworks.com",
+    "source": "https://www.eclinicalworks.com/wp-content/uploads/2014/08/main-logo.png",
+    "asset": "/media/vendors/eclinicalworks.png"
+  },
+  "meditech": {
+    "name": "MEDITECH",
+    "site": "https://meditech.com",
+    "source": "https://ehr.meditech.com/themes/ehrmeditech/images/meditech-logo.svg",
+    "asset": "/media/vendors/meditech.svg"
+  },
+  "nextgen": {
+    "name": "NextGen Healthcare",
+    "site": "https://nextgen.com",
+    "source": "https://nextgen.widen.net/content/vsqtemzc0f/svg/NG_Logo_Final_RGB_New.svg",
+    "asset": "/media/vendors/nextgen.svg"
+  },
+  "greenway": {
+    "name": "Greenway Health",
+    "site": "https://greenwayhealth.com",
+    "source": "https://cdn-ilepgkj.nitrocdn.com/leiTrYEUrkixMUDTeQVOxGNfXZNQXuOn/assets/images/source/rev-df47b09/www.greenwayhealth.com/wp-content/themes/greenwayhealth/assets/images/components/logo-greenway-health.svg",
+    "asset": "/media/vendors/greenway.svg"
+  },
+  "practice-fusion": {
+    "name": "Practice Fusion",
+    "site": "https://practicefusion.com",
+    "source": "https://practicefusion.com/assets/images/practice-fusion-logo.svg",
+    "asset": "/media/vendors/practice-fusion.svg"
+  },
+  "drchrono": {
+    "name": "DrChrono",
+    "site": "https://drchrono.com",
+    "source": "https://www.drchrono.com/wp-content/uploads/2026/05/DrChrono_FullColor_Default.png",
+    "asset": "/media/vendors/drchrono.png"
+  },
+  "office-ally": {
+    "name": "Office Ally",
+    "site": "https://officeally.com",
+    "source": "https://officeally.com/favicon.ico",
+    "asset": "/media/vendors/office-ally.ico"
+  },
+  "pointclickcare": {
+    "name": "PointClickCare",
+    "site": "https://pointclickcare.com",
+    "source": "https://pointclickcare.com/favicon.ico",
+    "asset": "/media/vendors/pointclickcare.ico"
+  },
+  "kipu": {
+    "name": "KIPU",
+    "site": "https://kipuhealth.com",
+    "source": "https://www.kipuhealth.com/wp-content/uploads/2026/07/kipu-helix-logo-lockup.webp",
+    "asset": "/media/vendors/kipu.webp"
+  },
+  "alleva": {
+    "name": "Alleva",
+    "site": "https://helloalleva.com",
+    "source": "https://helloalleva.com/wp-content/uploads/2025/04/alleva-logo.webp",
+    "asset": "/media/vendors/alleva.webp"
+  },
+  "sunwave": {
+    "name": "Sunwave Health",
+    "site": "https://sunwavehealth.com",
+    "source": "https://sunwavehealth.com/wp-content/uploads/2026/04/SWH-Logo-15.svg",
+    "asset": "/media/vendors/sunwave.svg"
+  },
+  "lightning-step": {
+    "name": "Lightning Step",
+    "site": "https://lightningstep.com",
+    "source": "https://cdn.prod.website-files.com/67d82b611bf9d5cc71bb556d/67d843101156d984fc4d166d_ls-logo-header.svg",
+    "asset": "/media/vendors/lightning-step.svg"
+  },
+  "ehr-your-way": {
+    "name": "EHR YOUR WAY",
+    "site": "https://ehryourway.com",
+    "source": "https://ehryourway.com/favicon.ico",
+    "asset": "/media/vendors/ehr-your-way.png"
+  },
+  "benji": {
+    "name": "Benji",
+    "site": "https://benji.health",
+    "source": "https://benji.health/wp-content/uploads/2024/03/Benji-Logo-White-400px.png",
+    "asset": "/media/vendors/benji.png"
+  },
+  "althea": {
+    "name": "Althea Smart EHR",
+    "site": "https://mdsynergy.com",
+    "source": "https://www.mdsynergy.com/wp-content/uploads/2026/04/cropped-Favicon-Square-2.png",
+    "asset": "/media/vendors/althea.png"
+  },
+  "tebra": {
+    "name": "Tebra",
+    "site": "https://tebra.com",
+    "source": "https://www.tebra.com/tebranew/_next/static/media/logo-header.6143dd1e.svg",
+    "asset": "/media/vendors/tebra.svg"
+  },
+  "advancedmd": {
+    "name": "AdvancedMD",
+    "site": "https://advancedmd.com",
+    "source": "https://www.advancedmd.com/wp-content/uploads/2026/03/advancedmd-logo-wordmark.svg",
+    "asset": "/media/vendors/advancedmd.svg"
+  },
+  "collaboratemd": {
+    "name": "CollaborateMD",
+    "site": "https://collaboratemd.com",
+    "source": "https://www.collaboratemd.com/wp-content/uploads/2026/05/CollaborateMD_FullColor_Default.svg",
+    "asset": "/media/vendors/collaboratemd.svg"
+  },
+  "pgm-billing": {
+    "name": "PGM Billing",
+    "site": "https://pgmbilling.com",
+    "source": "https://www.pgmbilling.com/wp-content/themes/pgm/assets/images/favicon.png",
+    "asset": "/media/vendors/pgm-billing.png"
+  },
+  "ads": {
+    "name": "ADS",
+    "site": "https://adsc.com",
+    "source": "https://www.adsc.com/hs-fs/file-389235653-png/new-images/logos/ADSC_logo_large.png?width=360&amp;height=45&amp;name=ADSC_logo_large.png",
+    "asset": "/media/vendors/ads.png"
+  },
+  "ritten": {
+    "name": "Ritten",
+    "site": "https://ritten.io",
+    "source": "https://cdn.prod.website-files.com/6a422df9e78845d649225aeb/6ac64c2d5acb99458ba0f868_Type%3DColor%20-%20Dark%20Text.svg",
+    "asset": "/media/vendors/ritten.svg"
+  },
+  "navix": {
+    "name": "Navix Health",
+    "site": "https://navixhealth.com",
+    "source": "https://www.navixhealth.com/icon.svg?icon.17_2c5mod574v.svg?dpl=dpl_DodbqCK6wy4ub6KqgpRho54ddEo5",
+    "asset": "/media/vendors/navix.svg"
+  }
+}

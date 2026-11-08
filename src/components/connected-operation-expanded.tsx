@@ -20,57 +20,57 @@ const sectors = [
 ] as const;
 
 const clients = [
-  ['sbh', 'SBH Laboratories', 'https://sbhlaboratories.com'],
-  ['healthquest', 'HealthQuest Esoterics', 'https://hqesoterics.com'],
-  ['atlas', 'Atlas Healthcare Group', 'https://atlashealthcaregroup.com'],
-  ['detoxla', 'Detox LA', 'https://detoxla.com'],
-  ['satori-detox', 'Satori Detox', 'https://satoridetox.com'],
-  ['satori-bh', 'Satori Behavioral Health', 'https://satoribh.com'],
-  ['silicon-beach', 'Silicon Beach Treatment Center', 'https://siliconbeachtx.com'],
+  ['/media/clients/sbh.png', 'SBH Laboratories', 'https://sbhlaboratories.com'],
+  ['/media/clients/healthquest.png', 'HealthQuest Esoterics', 'https://hqesoterics.com'],
+  ['/media/clients/atlas.png', 'Atlas Healthcare Group', 'https://atlashealthcaregroup.com'],
+  ['/media/clients/detoxla.png', 'Detox LA', 'https://detoxla.com'],
+  ['/media/clients/satori-detox.png', 'Satori Detox', 'https://satoridetox.com'],
+  ['/media/clients/satori-bh.png', 'Satori Behavioral Health', 'https://satoribh.com'],
+  ['/media/clients/silicon-beach.png', 'Silicon Beach Treatment Center', 'https://siliconbeachtx.com'],
+  ['/media/clients/nice.svg', 'Nice North America', 'https://www.niceforyou.com/na'],
 ] as const;
 
 const vendors = [
-  ['Epic', 'https://epic.com'],
-  ['athenahealth', 'https://athenahealth.com'],
-  ['eClinicalWorks', 'https://eclinicalworks.com'],
-  ['MEDITECH', 'https://meditech.com'],
-  ['NextGen Healthcare', 'https://nextgen.com'],
-  ['Greenway Health', 'https://greenwayhealth.com'],
-  ['Practice Fusion', 'https://practicefusion.com'],
-  ['DrChrono', 'https://drchrono.com'],
-  ['Office Ally', 'https://officeally.com'],
-  ['PointClickCare', 'https://pointclickcare.com'],
-  ['KIPU', 'https://kipuhealth.com'],
-  ['Alleva', 'https://helloalleva.com'],
-  ['Sunwave Health', 'https://sunwavehealth.com'],
-  ['Lightning Step', 'https://lightningstep.com'],
-  ['EHR YOUR WAY', 'https://ehryourway.com'],
-  ['Benji', 'https://benji.health'],
-  ['Althea Smart EHR', 'https://mdsynergy.com'],
-  ['Tebra', 'https://tebra.com'],
-  ['AdvancedMD', 'https://advancedmd.com'],
-  ['CollaborateMD', 'https://collaboratemd.com'],
-  ['PGM Billing', 'https://pgmbilling.com'],
-  ['ADS', 'https://adsc.com'],
-  ['Ritten', 'https://ritten.io'],
-  ['Navix Health', 'https://navixhealth.com'],
+  ['Epic', 'https://epic.com', '/media/vendors/epic.png'],
+  ['athenahealth', 'https://athenahealth.com', '/media/vendors/athenahealth.svg'],
+  ['eClinicalWorks', 'https://eclinicalworks.com', '/media/vendors/eclinicalworks.png'],
+  ['MEDITECH', 'https://meditech.com', '/media/vendors/meditech.svg'],
+  ['NextGen Healthcare', 'https://nextgen.com', '/media/vendors/nextgen.svg'],
+  ['Greenway Health', 'https://greenwayhealth.com', '/media/vendors/greenway.svg'],
+  ['Practice Fusion', 'https://practicefusion.com', '/media/vendors/practice-fusion.svg'],
+  ['DrChrono', 'https://drchrono.com', '/media/vendors/drchrono.png'],
+  ['Office Ally', 'https://officeally.com', '/media/vendors/office-ally.ico'],
+  ['PointClickCare', 'https://pointclickcare.com', '/media/vendors/pointclickcare.ico'],
+  ['KIPU', 'https://kipuhealth.com', '/media/vendors/kipu.webp'],
+  ['Alleva', 'https://helloalleva.com', '/media/vendors/alleva.webp'],
+  ['Sunwave Health', 'https://sunwavehealth.com', '/media/vendors/sunwave.svg'],
+  ['Lightning Step', 'https://lightningstep.com', '/media/vendors/lightning-step.svg'],
+  ['EHR YOUR WAY', 'https://ehryourway.com', '/media/vendors/ehr-your-way.png'],
+  ['Benji', 'https://benji.health', '/media/vendors/benji.png'],
+  ['Althea Smart EHR', 'https://mdsynergy.com', '/media/vendors/althea.png'],
+  ['Tebra', 'https://tebra.com', '/media/vendors/tebra.svg'],
+  ['AdvancedMD', 'https://advancedmd.com', '/media/vendors/advancedmd.svg'],
+  ['CollaborateMD', 'https://collaboratemd.com', '/media/vendors/collaboratemd.svg'],
+  ['PGM Billing', 'https://pgmbilling.com', '/media/vendors/pgm-billing.png'],
+  ['ADS', 'https://adsc.com', '/media/vendors/ads.png'],
+  ['Ritten', 'https://ritten.io', '/media/vendors/ritten.svg'],
+  ['Navix Health', 'https://navixhealth.com', '/media/vendors/navix.svg'],
 ] as const;
 
 const radarItems = ['EMR / EHR', 'LIS', 'Instruments', 'Billing', 'Data / BI', 'Infrastructure', 'Security', 'Operations'];
 
-function ClientTrack() {
+function ClientTrack({duplicate = false}: {duplicate?: boolean}) {
   return <div className="connected-client-group">
-    {clients.map(([slug, name, url]) => <a className="connected-client" href={url} key={name}>
-      <img src={`/media/clients/${slug}.png`} alt={name} width={220} height={90}/>
-      <span>{name}</span>
+    {clients.map(([logo, name, url]) => <a className="connected-client" href={url} key={name} aria-hidden={duplicate || undefined} tabIndex={duplicate ? -1 : undefined}>
+      <img src={logo} alt={duplicate ? '' : `${name} logo`} width={150} height={60}/>
     </a>)}
   </div>;
 }
 
-function VendorTrack() {
+function VendorTrack({duplicate = false}: {duplicate?: boolean}) {
   return <div className="connected-vendor-group">
-    {vendors.map(([name, url]) => <a className="connected-vendor" href={url} key={name}>
-      <span aria-hidden="true">●</span>{name}
+    {vendors.map(([name, url, logo]) => <a className="connected-vendor" href={url} key={name} aria-hidden={duplicate || undefined} tabIndex={duplicate ? -1 : undefined}>
+      <img src={logo} alt={duplicate ? '' : `${name} logo`} width={125} height={44}/>
     </a>)}
   </div>;
 }
@@ -103,20 +103,23 @@ export function ConnectedOperationExpanded() {
       </div>
 
       <div className="connected-ecosystem">
-        <div className="connected-ecosystem-heading">
-          <div><p className="eyebrow">Clients</p><h3>Organizations we have worked with</h3></div>
-          <p>Medical laboratories and behavioral health organizations represented in the current client list.</p>
+        <div className="connected-ecosystem-column">
+          <div className="connected-ecosystem-heading">
+            <p className="eyebrow">Clients</p>
+            <h3>Organizations we have worked with</h3>
+          </div>
+          <div className="connected-marquee connected-client-marquee" aria-label="Clients">
+            <div className="connected-marquee-track"><ClientTrack/><ClientTrack duplicate/></div>
+          </div>
         </div>
-        <div className="connected-marquee connected-client-marquee" aria-label="Clients">
-          <div className="connected-marquee-track"><ClientTrack/></div>
-        </div>
-
-        <div className="connected-ecosystem-heading connected-vendor-heading">
-          <div><p className="eyebrow">Technology ecosystem</p><h3>Vendors we have worked with</h3></div>
-          <p>EMR, EHR and billing platforms encountered across client environments and integration work.</p>
-        </div>
-        <div className="connected-marquee connected-vendor-marquee" aria-label="Technology vendors">
-          <div className="connected-marquee-track connected-marquee-track-reverse"><VendorTrack/></div>
+        <div className="connected-ecosystem-column">
+          <div className="connected-ecosystem-heading">
+            <p className="eyebrow">Technology ecosystem</p>
+            <h3>Vendors we have worked with</h3>
+          </div>
+          <div className="connected-marquee connected-vendor-marquee" aria-label="Technology vendors">
+            <div className="connected-marquee-track connected-marquee-track-reverse"><VendorTrack/><VendorTrack duplicate/></div>
+          </div>
         </div>
       </div>
     </div>

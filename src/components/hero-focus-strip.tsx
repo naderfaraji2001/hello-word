@@ -184,11 +184,11 @@ export function HeroFocusStrip() {
                 d={`${fromEdge} H ${stripMidpoint}`}
                 stroke={`url(#${tooltipId}-line-${index})`}
                 strokeWidth={weight}
-                opacity={opacity * .48}
+                opacity={opacity * .68}
               />
             ))}
             {outgoing.map(({join, forward, weight, opacity}) => (
-              <path key={join + forward} d={`M ${join} ${forward}`} strokeWidth={weight} opacity={opacity * .48}/>
+              <path key={join + forward} d={`M ${join} ${forward}`} strokeWidth={weight} opacity={opacity * .68}/>
             ))}
           </g>
           <g fill="none" strokeLinecap="round">
