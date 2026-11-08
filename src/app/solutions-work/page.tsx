@@ -11,7 +11,7 @@ import styles from "./solutions-work.module.css";
 export const metadata: Metadata = {
   title: "Solutions & Work — Utopia Tech",
   description: "Explore the business problems Utopia helps solve, the practical solutions behind the work, and related outcomes across revenue, systems, operations, infrastructure and data.",
-  alternates: { canonical: "/solutions-work" },
+  alternates: { canonical: "https://utopia-omega-six.vercel.app/solutions-work" },
 };
 
 const sections = [
