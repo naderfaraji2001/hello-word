@@ -44,6 +44,7 @@ svg{flex-shrink:0}.industry-links h3{display:flex;align-items:center;gap:12px}.i
 .header.on-light:not(.solid){color:var(--ink)}
 .header.on-light:not(.solid) .menu-toggle{color:var(--ink)}
 .header.scrolled .desktop-nav{background:transparent;border-color:transparent;backdrop-filter:none}
+.mobile-menu{max-height:calc(100dvh - 104px);overflow-y:auto;color:var(--paper)}
 .mobile-menu [aria-current]{background:#ffffff12}
 @media(min-width:901px){.header.scrolled{left:max(48px,calc((100vw - 1440px)/2));right:max(48px,calc((100vw - 1440px)/2))}}
 
