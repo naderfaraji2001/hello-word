@@ -168,14 +168,14 @@ export function AboutPage() {
           <figure data-about-reveal>
             <video controls preload="none" poster="/media/event-clip-poster.webp" aria-label="Healthcare technology event footage">
               <source src="/media/event-clip.mp4" type="video/mp4"/>
-              <track kind="captions" src="/media/event.vtt" srcLang="en" label="English" default/>
+              <track kind="descriptions" src="/media/event.vtt" srcLang="en" label="English descriptions"/>
             </video>
             <figcaption>Industry conversation · Event context — no endorsement implied</figcaption>
           </figure>
           <figure data-about-reveal>
             <video controls preload="none" poster="/media/exhibit-poster.webp" aria-label="Laboratory technology exhibit footage">
               <source src="/media/exhibit.mp4" type="video/mp4"/>
-              <track kind="captions" src="/media/exhibit.vtt" srcLang="en" label="English" default/>
+              <track kind="descriptions" src="/media/exhibit.vtt" srcLang="en" label="English descriptions"/>
             </video>
             <figcaption>Exploring laboratory technology · Exhibit equipment is not represented as Utopia property.</figcaption>
           </figure>

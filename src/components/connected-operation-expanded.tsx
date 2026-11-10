@@ -23,8 +23,7 @@ const clients = [
   ['/media/clients/sbh.png', 'SBH Laboratories', 'https://sbhlaboratories.com'],
   ['/media/clients/healthquest.png', 'HealthQuest Esoterics', 'https://hqesoterics.com'],
   ['/media/clients/atlas.png', 'Atlas Healthcare Group', 'https://atlashealthcaregroup.com'],
-  ['/media/clients/detoxla.png', 'Detox LA', 'https://detoxla.com'],
-  ['/media/clients/satori-detox.png', 'Satori Detox', 'https://satoridetox.com'],
+  ['/media/clients/detoxla.png', 'Detox LA', 'https://detoxla.com', true],
   ['/media/clients/satori-bh.png', 'Satori Behavioral Health', 'https://satoribh.com'],
   ['/media/clients/silicon-beach.png', 'Silicon Beach Treatment Center', 'https://siliconbeachtx.com'],
   ['/media/clients/nice.svg', 'Nice North America', 'https://www.niceforyou.com/na'],
@@ -61,8 +60,8 @@ const radarItems = ['EMR / EHR', 'LIS', 'Instruments', 'Billing', 'Data / BI', '
 
 function ClientTrack({duplicate = false}: {duplicate?: boolean}) {
   return <div className="connected-client-group">
-    {clients.map(([logo, name, url]) => <a className="connected-client" href={url} key={name} aria-hidden={duplicate || undefined} tabIndex={duplicate ? -1 : undefined}>
-      <img src={logo} alt={duplicate ? '' : `${name} logo`} width={150} height={60}/>
+    {clients.map(([logo, name, url, monochrome]) => <a className="connected-client" href={url} key={name} aria-hidden={duplicate || undefined} tabIndex={duplicate ? -1 : undefined}>
+      <img className={monochrome ? 'connected-client-logo-monochrome' : undefined} src={logo} alt={duplicate ? '' : `${name} logo`} width={150} height={60}/>
     </a>)}
   </div>;
 }
