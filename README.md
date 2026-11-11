@@ -64,7 +64,23 @@ pnpm leads:export contact
 
 Exports are written beside the private JSONL files. CSV quotes are escaped and formula prefixes neutralized. No public lead listing endpoint exists. Keep exports private and delete synthetic QA records under your own retention process when no longer needed.
 
-## Google Sheets configuration (not connected yet)
+## Google Sheets through Apps Script
+
+This connection uses a spreadsheet-bound Apps Script Web app and its deploying Google account. The default Cloud project is managed by Google. The website sends signed requests from the server and confirms receipt only after the script verifies a saved row. Assessment confirmation appears in place of the form on the same page.
+
+Verified on 2026-11-11 against the owner's configured spreadsheet through the local website. Synthetic assessment and contact submissions both returned a confirmed save and were found again through the signed status endpoint. Same-ID retries returned the existing receipt, and changed assessment answers with the same ID returned a conflict. The in-page assessment confirmation was checked at desktop and mobile sizes. Two records labeled `UTOPIA TEST - safe to delete` remain in the intended tabs. Private settings and verification references are retained only in ignored local files. Public-host configuration and production Redis setup remain outstanding.
+
+1. Copy `scripts/google-apps-script/Code.gs` into the spreadsheet's **Extensions → Apps Script** editor. Set `SPREADSHEET_ID` and a random shared secret of at least 32 characters. A prepared, private copy may be kept under ignored `data/setup/` with matching settings in `.env.local`.
+2. Save, select `setup`, click **Run**, and authorize access with an account that can edit the intended sheet. Setup creates **Assessment Requests** and **Contact Requests**, checks existing column headers, and adds a hidden `payload_hash` column after the established business columns. Existing tabs and records are preserved.
+3. Choose **Deploy → New deployment → Web app**. Set **Execute as** to **Me** and **Who has access** to **Anyone** so the website server can reach it. Requests require an HMAC signature and expire after five minutes. Organizational settings must permit this deployment option. Share the spreadsheet itself only with the intended team.
+4. Put the resulting `/exec` URL in the server-only `GOOGLE_APPS_SCRIPT_URL` setting and the matching secret in `GOOGLE_APPS_SCRIPT_SECRET`. Set `LEAD_STORAGE=google_apps_script` only when deployment is ready. Restart the local server or apply the settings to the site's hosting environment.
+5. Send a marked synthetic assessment and contact request and verify the rows in the owner's sheet. Check same-ID retries and the recovery screen before considering the integration connected. External writes remain unverified until this check is completed.
+
+This mode uses Apps Script's script lock and persisted pending-write reservations for write coordination. Development rate limits use persisted Apps Script counters. Production retains the project's durable Redis requirement for rate limits, configured with `REDIS_REST_URL` and `REDIS_REST_TOKEN`. A row's hidden hash preserves duplicate/conflict checks after server restarts. Pending reservations retain their row numbers so later submissions cannot reuse a row whose write is uncertain. If a write remains uncertain and no matching ID is found, it requires operator review before retrying. Do not delete pending reservations to force another append. Keep one writer deployment for these tabs, and preserve the technical hash column when sorting or editing rows. This is conservative delivery with reconciliation, subject to Apps Script quotas, rather than a transactional delivery guarantee.
+
+After changing the script, use **Deploy → Manage deployments → Edit → New version** to update the existing Web app. Its secret and URL belong only in server settings. A deployment executing as a personal account depends on that account retaining edit access. Use a company-managed deploying account for the production handoff.
+
+## Google Sheets through a service account
 
 1. In your own Google Cloud project enable Sheets API and create a dedicated service account. Obtain credentials through the normal Google owner workflow.
 2. Create a private spreadsheet and tabs exactly named **Assessment Requests** and **Contact Requests**. Share only with the service-account email as editor.
@@ -84,7 +100,7 @@ Rotate service account keys through Google Cloud, replace the secret in server e
 
 - Create/import this application only after an explicit deployment request. Project root is `website`; use pnpm lockfile and Node 22.
 - Set build `pnpm build`, Next.js preset. Keep source evidence/inputs/lead files out of the repository/deployment.
-- Set production environment to Google Sheets plus durable Redis, random signing secret, exact public site URL and allowed origins. Local filesystem storage is rejected in production by code.
+- Set production environment to a verified Apps Script deployment or Google Sheets service-account connection, durable Redis, a random signing secret, exact public site URL and allowed origins. Local filesystem storage is rejected in production by code.
 - Run synthetic assessment/contact writes in the intended private worksheets; verify duplicate/conflict and uncertain recovery. Ensure the durable store has backups and owner access.
 - Confirm contact details, policy fit, asset permissions, product status and case attribution. Keep anonymous labels and qualitative claims until approvals exist. Review public indexing and canonical/OG settings.
 - Optional calendar renders only with a public `NEXT_PUBLIC_CALENDAR_URL`. Analytics remain off; no automatic inquiry email is implemented.

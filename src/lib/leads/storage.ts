@@ -1,4 +1,5 @@
 import 'server-only';
+import {appsScriptConfiguration,appsScriptRequest} from './apps-script';
 import {appendFile,mkdir,readFile} from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {JWT} from 'google-auth-library';import type {Lead} from '../validation/forms';import {toRow,type FormType} from './mapping';
 export type SaveResult={status:'saved'|'duplicate';submissionId:string;receipt:string}|{status:'uncertain';submissionId:string}|{status:'failed';code:string};
 export interface SubmissionRepository{save(type:FormType,payload:Lead):Promise<SaveResult>}
@@ -14,7 +15,33 @@ export const localRepository:SubmissionRepository={save(type,payload){const task
  const time=new Date().toISOString();await appendFile(file,JSON.stringify({type,receivedAt:time,hash:digest,payload,row:toRow(type,payload,time)})+'\n',{mode:0o600});return{status:'saved',submissionId:payload.submissionId,receipt:payload.submissionId} as SaveResult;
  });writes.queue=task.catch(()=>{});return task;}};
 async function redis(...command:unknown[]){const url=process.env.REDIS_REST_URL,token=process.env.REDIS_REST_TOKEN;if(!url||!token)throw Error('DURABLE_STORE_REQUIRED');const r=await fetch(url,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(command),signal:AbortSignal.timeout(8000)});if(!r.ok)throw Error('DURABLE_STORE_UNAVAILABLE');const body=await r.json();if(body.error)throw Error('DURABLE_STORE_UNAVAILABLE');return body.result;}
-export async function durableRate(key:string){const slot=Math.floor(Date.now()/600000);const k=`utopia:rate:${slot}:${hash(key)}`;const n=await redis('INCR',k);if(n===1)await redis('EXPIRE',k,660);return Number(n)<=8;}
+export async function durableRate(key:string){
+ if(process.env.LEAD_STORAGE==='google_apps_script'&&process.env.NODE_ENV!=='production'){
+  const result=await appsScriptRequest({operation:'rate',key});
+  if(result.status!=='allowed'&&result.status!=='limited')throw Error('APPS_SCRIPT_UNAVAILABLE');
+  return result.status==='allowed';
+ }
+ const slot=Math.floor(Date.now()/600000);
+ const k=`utopia:rate:${slot}:${hash(key)}`;
+ const n=await redis('INCR',k);
+ if(n===1)await redis('EXPIRE',k,660);
+ return Number(n)<=8;
+}
+export const appsScriptRepository:SubmissionRepository={
+ async save(type,payload){
+  let result;
+  try{
+   result=await appsScriptRequest({operation:'save',type,submissionId:payload.submissionId,hash:hash({type,payload}),row:toRow(type,payload,new Date().toISOString())});
+  }catch{
+   return{status:'uncertain',submissionId:payload.submissionId};
+  }
+  if(result.status==='conflict')throw new Conflict();
+  if((result.status==='saved'||result.status==='duplicate')&&result.submissionId===payload.submissionId&&result.type===type){
+   return{status:result.status,submissionId:payload.submissionId,receipt:payload.submissionId};
+  }
+  return{status:'uncertain',submissionId:payload.submissionId};
+ }
+};
 export const sheetsRepository:SubmissionRepository={async save(type,payload){
  const id=payload.submissionId,key=`utopia:submission:${id}`,digest=hash({type,payload});const existing=await redis('GET',key);if(existing){const state=JSON.parse(existing);if(state.hash!==digest||state.type!==type)throw new Conflict();if(state.status==='saved')return{status:'duplicate',submissionId:id,receipt:id};return reconcile(type,id,key,digest);}
  const acquired=await redis('SET',key,JSON.stringify({hash:digest,type,status:'processing'}),'NX');if(!acquired){const raw=await redis('GET',key);if(raw){const winner=JSON.parse(raw);if(winner.hash!==digest||winner.type!==type)throw new Conflict();if(winner.status==='saved')return{status:'duplicate',submissionId:id,receipt:id};}return{status:'uncertain',submissionId:id};}
@@ -24,5 +51,5 @@ function sheetId(){if(!process.env.GOOGLE_SPREADSHEET_ID)throw Error('SHEETS_NOT
 function tabName(type:FormType){const t=type==='assessment'?(process.env.GOOGLE_ASSESSMENT_TAB||'Assessment Requests'):(process.env.GOOGLE_CONTACT_TAB||'Contact Requests');return t.replaceAll("'","''");}
 function sheetsClient(){if(!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL||!process.env.GOOGLE_PRIVATE_KEY)throw Error('SHEETS_NOT_CONFIGURED');return new JWT({email:process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,key:process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g,'\n'),scopes:['https://www.googleapis.com/auth/spreadsheets']});}
 async function reconcile(type:FormType,id:string,key:string,digest:string):Promise<SaveResult>{try{const res=await sheetsClient().request<{values?:string[][]}>({url:`https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(sheetId())}/values/${encodeURIComponent(`'${tabName(type)}'!A:A`)}`,retry:false});if(res.data.values?.some(r=>r[0]===id)){await redis('SET',key,JSON.stringify({hash:digest,type,status:'saved'}));return{status:'duplicate',submissionId:id,receipt:id};}}catch{}return{status:'uncertain',submissionId:id};}
-export function storage(){const mode=process.env.LEAD_STORAGE||'local';if(mode==='google_sheets'){sheetId();sheetsClient();if(!process.env.REDIS_REST_URL||!process.env.REDIS_REST_TOKEN)throw Error('DURABLE_STORE_REQUIRED');return sheetsRepository;}if(mode!=='local')throw Error('INVALID_STORAGE');return localRepository;}
-export async function lookup(type:FormType,id:string):Promise<boolean>{if(process.env.LEAD_STORAGE==='google_sheets'){const key=`utopia:submission:${id}`;const raw=await redis('GET',key);if(!raw)return false;const a=JSON.parse(raw);if(a.type!==type)return false;const r=await reconcile(type,id,key,a.hash);return r.status==='duplicate';}try{const raw=await readFile(path.join(localDirectory(),`${type}-submissions.jsonl`),'utf8');return raw.split('\n').filter(Boolean).some(l=>JSON.parse(l).payload.submissionId===id);}catch{return false;}}
+export function storage(){const mode=process.env.LEAD_STORAGE||'local';if(mode==='google_apps_script'){appsScriptConfiguration();if(process.env.NODE_ENV==='production'&&(!process.env.REDIS_REST_URL||!process.env.REDIS_REST_TOKEN))throw Error('DURABLE_STORE_REQUIRED');return appsScriptRepository;}if(mode==='google_sheets'){sheetId();sheetsClient();if(!process.env.REDIS_REST_URL||!process.env.REDIS_REST_TOKEN)throw Error('DURABLE_STORE_REQUIRED');return sheetsRepository;}if(mode!=='local')throw Error('INVALID_STORAGE');return localRepository;}
+export async function lookup(type:FormType,id:string):Promise<boolean>{if(process.env.LEAD_STORAGE==='google_apps_script'){const result=await appsScriptRequest({operation:'lookup',type,submissionId:id});if(result.type!==type||result.submissionId!==id||(result.status!=='received'&&result.status!=='checking'))throw Error('APPS_SCRIPT_UNAVAILABLE');return result.status==='received';}if(process.env.LEAD_STORAGE==='google_sheets'){const key=`utopia:submission:${id}`;const raw=await redis('GET',key);if(!raw)return false;const a=JSON.parse(raw);if(a.type!==type)return false;const r=await reconcile(type,id,key,a.hash);return r.status==='duplicate';}try{const raw=await readFile(path.join(localDirectory(),`${type}-submissions.jsonl`),'utf8');return raw.split('\n').filter(Boolean).some(l=>JSON.parse(l).payload.submissionId===id);}catch{return false;}}

@@ -1,0 +1,42 @@
+.confirmation {
+  scroll-margin-top: 130px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 28px;
+  border: 1px solid #b6bf9f;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.confirmation h2 {
+  margin-top: 16px;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+}
+
+.body {
+  margin-top: 20px;
+  line-height: 1.65;
+}
+
+.reference {
+  margin: 28px 0;
+  padding-top: 20px;
+  border-top: 1px solid #d2d6c4;
+  font: 12px/1.8 var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
