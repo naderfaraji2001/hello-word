@@ -68,7 +68,9 @@ Exports are written beside the private JSONL files. CSV quotes are escaped and f
 
 This connection uses a spreadsheet-bound Apps Script Web app and its deploying Google account. The default Cloud project is managed by Google. The website sends signed requests from the server and confirms receipt only after the script verifies a saved row. Assessment confirmation appears in place of the form on the same page.
 
-Verified on 2026-11-11 against the owner's configured spreadsheet through the local website. Synthetic assessment and contact submissions both returned a confirmed save and were found again through the signed status endpoint. Same-ID retries returned the existing receipt, and changed assessment answers with the same ID returned a conflict. The in-page assessment confirmation was checked at desktop and mobile sizes. Two records labeled `UTOPIA TEST - safe to delete` remain in the intended tabs. Private settings and verification references are retained only in ignored local files. Public-host configuration and production Redis setup remain outstanding.
+Verified on 2026-11-11 against the owner's configured spreadsheet through the local website. Synthetic assessment and contact submissions both returned a confirmed save and were found again through the signed status endpoint. Same-ID retries returned the existing receipt, and changed assessment answers with the same ID returned a conflict. The in-page assessment confirmation was checked at desktop and mobile sizes. Two records labeled `UTOPIA TEST - safe to delete` were saved in the intended tabs. Private settings and verification references are retained only in ignored local files.
+
+Production was configured and verified later on 2026-11-11 at https://utopia-omega-six.vercel.app. Both forms were submitted through Chrome on the public site and displayed their confirmation messages. The production assessment was found again in the configured spreadsheet, and its stored payload passed duplicate and changed-payload conflict checks. Additional marked test records remain in the tabs. The `utopia-form-rate-limits` Upstash database uses the Free plan in `iad1`, is connected only to Production, and supplies its Redis credentials as secret `KV_REST_API_*` variables. The connection URL, shared secret, receipt-signing secret, allowed origin and public site URL are configured in Vercel. Private production verification references are under ignored `data/setup/`.
 
 1. Copy `scripts/google-apps-script/Code.gs` into the spreadsheet's **Extensions → Apps Script** editor. Set `SPREADSHEET_ID` and a random shared secret of at least 32 characters. A prepared, private copy may be kept under ignored `data/setup/` with matching settings in `.env.local`.
 2. Save, select `setup`, click **Run**, and authorize access with an account that can edit the intended sheet. Setup creates **Assessment Requests** and **Contact Requests**, checks existing column headers, and adds a hidden `payload_hash` column after the established business columns. Existing tabs and records are preserved.
@@ -96,9 +98,9 @@ Rate limiting uses normalized email plus origin rather than trusting forwarded I
 
 Rotate service account keys through Google Cloud, replace the secret in server environment settings, verify a synthetic write, revoke the prior key, and review spreadsheet sharing. Rotating signing secrets invalidates existing receipt/status links. Never print keys, form payloads or receipt tokens in logs.
 
-## Vercel later (no deployment performed)
+## Vercel deployment
 
-- Create/import this application only after an explicit deployment request. Project root is `website`; use pnpm lockfile and Node 22.
+- The existing Vercel project is `utopia` in the Utopia team. Production follows `master` in `naderfaraji2001/hello-word`. Use the repository root (the local `website` directory), the pnpm lockfile and Node 22.
 - Set build `pnpm build`, Next.js preset. Keep source evidence/inputs/lead files out of the repository/deployment.
 - Set production environment to a verified Apps Script deployment or Google Sheets service-account connection, durable Redis, a random signing secret, exact public site URL and allowed origins. Local filesystem storage is rejected in production by code.
 - Run synthetic assessment/contact writes in the intended private worksheets; verify duplicate/conflict and uncertain recovery. Ensure the durable store has backups and owner access.
