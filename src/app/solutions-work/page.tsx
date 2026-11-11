@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
 import { caseHref } from "@/app/case-studies/case-studies";
 import { AssessmentCTA, Button, SectionHead } from "@/components/ui";
-import { SolutionAccordion } from "./solution-accordion";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
+import { FeaturedCard, FeaturedStack } from "./featured-stack";
+import { SolutionCarousel } from "./solution-carousel";
 import { WorkArchive } from "./work-archive";
 import { archiveEntries, featuredWork, moreSolutions } from "./solutions-work-data";
 import styles from "./solutions-work.module.css";
@@ -112,16 +114,28 @@ export default function SolutionsWorkPage() {
             title={<span id="featured-work-title">Real problems. Practical responses. Clear outcomes.</span>}
             body="Each example begins with the issue the organization was facing, then connects the solution to the change it supported."
           />
-          <ol className={styles.featuredList}>
+          <FeaturedStack>
             {featuredWork.map((entry, index) => (
               <li key={entry.id}>
-                <article className={styles.feature} aria-labelledby={`work-solution-${entry.id}`}>
+                <FeaturedCard
+                  labelledBy={`work-solution-${entry.id}`}
+                  action={
+                    <Link
+                      className={styles.caseAction}
+                      href={caseHref(entry.study)}
+                      aria-label={`Read the full case study: ${entry.study.title}`}
+                    >
+                      <span>Read the full case study</span>
+                      <span className={styles.caseArrow}><ArrowRight size={21} aria-hidden="true" /></span>
+                    </Link>
+                  }
+                >
                   <div className={styles.problem}>
                     <div className={styles.problemHeader}>
                       <p className={styles.label}>The problem</p>
-                      <span className={styles.featureIndex} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <p className={styles.quote}>{entry.pain}</p>
+                    <span className={styles.featureIndex} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                   </div>
                   <div className={styles.solution}>
                     <p className={styles.label}>The solution</p>
@@ -139,19 +153,12 @@ export default function SolutionsWorkPage() {
                     <div className={styles.relatedCase}>
                       <p className={styles.label}>Related case study</p>
                       <p className={styles.caseTitle}>{entry.study.title}</p>
-                      <Link
-                        className={styles.textLink}
-                        href={caseHref(entry.study)}
-                        aria-label={`Read the full case study: ${entry.study.title}`}
-                      >
-                        Read the full case study <ArrowUpRight size={16} aria-hidden="true" />
-                      </Link>
                     </div>
                   </div>
-                </article>
+                </FeaturedCard>
               </li>
             ))}
-          </ol>
+          </FeaturedStack>
         </div>
       </section>
 
@@ -162,31 +169,39 @@ export default function SolutionsWorkPage() {
             title={<span id="more-solutions-title">Not every engagement starts in the same place.</span>}
             body="Some organizations begin with one immediate problem. Others need a broader assessment across systems, costs, operations and ownership."
           />
-          <div className={styles.accordionGrid}>
+          <SolutionCarousel>
             {moreSolutions.map(entry => (
-              <SolutionAccordion key={entry.id} title={entry.solutionTitle} pain={entry.pain} status={entry.status}>
-                <p className={styles.label}>The solution</p>
-                <p>{entry.solutionDescription}</p>
-                <p className={styles.label}>{entry.hasResults ? "Business benefit" : "Intended benefits"}</p>
-                <p>{entry.benefit}</p>
-                <div className={styles.accordionLinks}>
-                  {entry.detail && (
-                    <Link href={entry.detail.route} className={styles.textLink}>
-                      Explore {entry.detail.label.toLowerCase()} <ArrowUpRight size={16} aria-hidden="true" />
-                    </Link>
-                  )}
-                  <Link href={caseHref(entry.study)} className={styles.textLink}>
-                    {entry.study.title} <ArrowUpRight size={16} aria-hidden="true" />
-                  </Link>
-                  {entry.product && (
-                    <Link href={entry.product.href} className={styles.textLink}>
-                      {entry.product.label} <ArrowUpRight size={16} aria-hidden="true" />
-                    </Link>
-                  )}
-                </div>
-              </SolutionAccordion>
+              <li key={entry.id}>
+                <article className={styles.solutionCard}>
+                  <header className={styles.solutionCardHeader}>
+                    <p className={styles.solutionPain}>{entry.pain}</p>
+                    <h3>{entry.solutionTitle}</h3>
+                  </header>
+                  <div className={styles.solutionCardBody}>
+                    <p className={styles.label}>The solution</p>
+                    <p>{entry.solutionDescription}</p>
+                    <p className={styles.label}>{entry.hasResults ? "Business benefit" : "Intended benefits"}</p>
+                    <p>{entry.benefit}</p>
+                    <div className={styles.solutionLinks}>
+                      {entry.detail && (
+                        <Link href={entry.detail.route} className={styles.textLink}>
+                          Explore {entry.detail.label.toLowerCase()} <ArrowUpRight size={16} aria-hidden="true" />
+                        </Link>
+                      )}
+                      <Link href={caseHref(entry.study)} className={styles.textLink}>
+                        {entry.study.title} <ArrowUpRight size={16} aria-hidden="true" />
+                      </Link>
+                      {entry.product && (
+                        <Link href={entry.product.href} className={styles.textLink}>
+                          {entry.product.label} <ArrowUpRight size={16} aria-hidden="true" />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              </li>
             ))}
-          </div>
+          </SolutionCarousel>
         </div>
       </section>
 
